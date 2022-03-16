@@ -47,7 +47,7 @@ def alphanumeric?(character)
         # return  character.ord.between?('a'.ord, 'z'.ord) ||
         #         character.ord.between?('A'.ord, 'Z'.ord) ||
         #         character.ord.between?('0'.ord, '9'.ord)
-    end
+end
 def is_palindrome(s)
     left, right = 0, s.length-1
     while left < right
