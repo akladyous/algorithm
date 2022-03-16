@@ -14,5 +14,5 @@ def find_boundary(array: List[int]):
     return boundaryIndex
 
 
-print(find_boundary([False, False, False, True, True, True]))
+print(find_boundary([False, False, True, True, True, True]))
 

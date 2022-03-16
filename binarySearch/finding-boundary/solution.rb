@@ -21,3 +21,6 @@ puts find_boundary([false, false, false, true, true, true])
 
 #             0      1      2      3    4      5
 # testcase [FALSE, FALSE, TRUE, TRUE, TRUE, TRUE]
+#                          ↑ middle index
+#                     ↑ middle index
+

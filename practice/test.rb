@@ -1,4 +1,4 @@
-require 'debug'
+# require 'debug'
 
 def findFirstDuplicate1(nums)
     # debugger
@@ -128,4 +128,26 @@ def selectionSort(nums)
     nums
 end
 
-p selectionSort([3,2,0,9,4,7,10,5,1,6,8])
+# p selectionSort([3,2,0,9,4,7,10,5,1,6,8])
+
+
+def length_of_longest_substring(s)
+    left, right, max = 0, 0, 0
+    window = []
+    while right < s.length
+        if window.include?(s[right])
+            window.delete(s[left])
+            left += 1
+        else
+            window.append(s[right])
+            max = [max, window.length].max
+            right += 1
+        end
+    end
+    max
+end
+
+# puts length_of_longest_substring("abcabcbb")
+# puts length_of_longest_substring("bbbbb")
+# puts length_of_longest_substring("pwwkew")
+
