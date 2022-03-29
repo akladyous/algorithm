@@ -81,4 +81,35 @@ def remove_duplicates(arr: List[int]) -> int:
             left += 1
             arr[left] = arr[right]
     return left + 1
-print(remove_duplicates([0, 0, 1, 1, 1, 2, 2]))
+# print(remove_duplicates([0, 0, 1, 1, 1, 2, 2]))
+
+def move_zeros(nums: List[int]) -> None:
+    left = 0
+    for right in range(len(nums)):
+        if nums[right] != 0:
+            nums[left], nums[right] = nums[right], nums[left]
+            left += 1
+    return nums
+
+# print(move_zeros([1,0,2,0,0,7]))
+# print(move_zeros([0,0,2,1,0,0,7]))
+
+def two_sum_sorted1(arr: List[int], target: int) -> List[int]:
+    for x in range(len(arr)):
+        for y in range(len(arr)):
+            if arr[x] + arr[y] == target:
+                return arr[x], arr[y]
+
+
+def two_sum_sorted2(arr: List[int], target: int) -> List[int]:
+    left, right = 0, len(arr) - 1
+    while left < right:
+        if arr[left] + arr[right] == target:
+            return arr[left], arr[right]
+        if (arr[left] + arr[right]) < target:
+            left += 1
+        else:
+            right -= 1
+
+print(two_sum_sorted1([2, 3, 5, 8, 11, 15], 5))
+print(two_sum_sorted2([2, 3, 5, 8, 11, 15], 13))
