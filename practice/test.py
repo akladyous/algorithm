@@ -111,5 +111,40 @@ def two_sum_sorted2(arr: List[int], target: int) -> List[int]:
         else:
             right -= 1
 
-print(two_sum_sorted1([2, 3, 5, 8, 11, 15], 5))
-print(two_sum_sorted2([2, 3, 5, 8, 11, 15], 13))
+# print(two_sum_sorted1([2, 3, 5, 8, 11, 15], 5))
+
+def is_palindrome(s: str) -> bool:
+    left, right = 0, len(s) - 1
+    while left < right:
+        while left < right and not s[left].isalnum():
+            left += 1
+        while right > left and not s[right].isalnum():
+            right -= 1
+        if s[left].lower() != s[right].lower():
+            return False
+        left += 1
+        right -= 1
+    return True
+
+# print(is_palindrome("Do geese see God?"))
+# print(is_palindrome("Was it a car or a cat I saw?"))
+# print(is_palindrome(" A brown fox jumping over"))
+
+
+def longest_substring_without_repeating_characters(s: str) -> int:
+    left = right = result = 0
+    window = set()
+    while right < len(s):
+        if not s[right] in window:
+            window.add(s[right])
+            right += 1
+            result = max(result, len(window))
+        else:
+            window.remove(s[left])
+            left += 1
+    return result
+
+# window = {'a','b','c'}
+# window = {'a','b','c'}
+# print(longest_substring_without_repeating_characters('abccabcabcc'))
+# print(longest_substring_without_repeating_characters('aaaabaaa'))
