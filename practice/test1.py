@@ -68,7 +68,17 @@ def remove_duplicates(arr: List[int]) -> int:
             left += 1
             arr[left] = arr[right]
     return left + 1
-#           ↓
-#[0,1,2,1,1,2,2]
-#    ↑
-print(remove_duplicates([0,0,1,1,1,2,2]))
+# print(remove_duplicates([0,0,1,1,1,2,2]))
+
+def removeElement(nums: List[int], val: int) -> int:
+    left = 0
+    for right in range(len(nums)):
+        if nums[right] != val:
+            nums[left] = nums[right]
+            left += 1
+    return left
+# 
+# [3,2,2,3]
+#  
+print(removeElement([3,2,2,3], 3))
+# print(removeElement([0,1,2,2,3,0,4,2], 2))
