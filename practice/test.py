@@ -9,9 +9,7 @@ def countLetters(string: str, letter: str):
             counts[letter] = 1
     return counts[letter]
 
-
 # print(countLetters('aaa', 'a'))
-
 
 def isPalindrome(x: int) -> bool:
     # Base condition
@@ -30,17 +28,17 @@ def isPalindrome(x: int) -> bool:
 
 
 
-def binary_search(arr: List[int], target: int) -> int:
-    leftIndex, rightIndex = 0, len(arr) - 1
-    while leftIndex <= rightIndex:
-        middleIndex = (leftIndex + rightIndex) // 2
-        if arr[middleIndex] == target:
-            return middleIndex
-        if arr[middleIndex] < target:
-            leftIndex = middleIndex + 1
-        else:
-            rightIndex = middleIndex - 1
-    return -1
+# def binary_search(arr: List[int], target: int) -> int:
+#     leftIndex, rightIndex = 0, len(arr) - 1
+#     while leftIndex <= rightIndex:
+#         middleIndex = (leftIndex + rightIndex) // 2
+#         if arr[middleIndex] == target:
+#             return middleIndex
+#         if arr[middleIndex] < target:
+#             leftIndex = middleIndex + 1
+#         else:
+#             rightIndex = middleIndex - 1
+#     return -1
 
 # print(binary_search([1,2,3,4,5,6], 4))
 
@@ -148,3 +146,5 @@ def longest_substring_without_repeating_characters(s: str) -> int:
 # window = {'a','b','c'}
 # print(longest_substring_without_repeating_characters('abccabcabcc'))
 # print(longest_substring_without_repeating_characters('aaaabaaa'))
+
+

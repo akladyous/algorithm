@@ -6,7 +6,7 @@ def lengthOfLongestSubstring(s: str):
         if not s[right] in window:
             window.add(s[right])
             right += 1
-            result = max(result, len(window))
+            result = max(result, (right - left))
         else:
             window.remove(s[left])
             left += 1

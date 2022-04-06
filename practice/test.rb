@@ -151,3 +151,52 @@ end
 # puts length_of_longest_substring("bbbbb")
 # puts length_of_longest_substring("pwwkew")
 
+def binarySearch(arr, target)
+    left, right = 0, arr.length-1
+    while left <= right
+        middle = (right + left) / 2
+        return middle if arr[middle] == target
+        if arr[middle] < target
+            left = middle + 1
+        else
+            right = middle -1
+        end
+    end
+    -1
+end
+# puts binarySearch([2, 3, 5, 7, 11, 13, 17, 19], 3)
+
+def find_boundary(arr)
+    left = 0
+    right = arr.length - 1
+    boundaryIndex = 0
+    while left <= right
+        middle = (left + right) / 2
+        if arr[middle]
+            boundaryIndex = middle
+            right = middle - 1
+        else
+            left = middle + 1
+        end
+    end
+    boundaryIndex
+end
+# puts find_boundary([false, false, true, true, true])
+
+def first_not_smaller(array, target)
+    left, right = 0, array.length-1
+    matchIndex = -1
+    while left <= right
+        middle = (left + right) / 2
+        if array[middle] >= target
+            matchIndex = middle
+            right = middle - 1
+        else
+            left = middle + 1
+        end
+    end
+    matchIndex
+end
+# puts first_not_smaller([1,3,3,5,8,8,10],2)
+# puts first_not_smaller([1,3,3,5,8,8,10],8)
+
