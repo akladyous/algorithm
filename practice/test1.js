@@ -27,4 +27,17 @@ var lengthOfLastWord = function (s) {
     };
     return wordLength;
 };
-console.log(lengthOfLastWord("Hello World"));
+// console.log(lengthOfLastWord("Hello World"));
+
+var twoSum = function (nums, target) {
+    let hashMap = new Map();
+    for(let i = 0; i < nums.length; i++){
+        let diff = target - nums[i];
+        if(hashMap.has(diff)){
+            return [hashMap.get(diff), i];
+        };
+        hashMap.set(nums[i], i);
+    };
+};
+
+console.log(twoSum([2, 7, 11, 15], 17));
