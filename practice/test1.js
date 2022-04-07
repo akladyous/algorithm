@@ -13,6 +13,18 @@ function binarySearch(array = new Array(), target) {
     return -1
 };
 
-console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6));
+// console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6));
 
-function twoSumSorted()
+var lengthOfLastWord = function (s) {
+    let pointer = s.length - 1;
+    let wordLength = 0;
+    while(s[pointer] === ' '){
+        pointer --;
+    };
+    while(pointer >= 0 && s[pointer] !== ' '){
+        wordLength ++;
+        pointer --;
+    };
+    return wordLength;
+};
+console.log(lengthOfLastWord("Hello World"));
