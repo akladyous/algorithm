@@ -1,8 +1,8 @@
 function binarySearch(array = new Array(), target) {
-    leftIdx = 0;
-    rightIdx = array.length - 1;
+    let leftIdx = 0;
+    let rightIdx = array.length - 1;
     while (leftIdx <= rightIdx) {
-        middleIdx = Math.floor((leftIdx + rightIdx) / 2)
+        let middleIdx = Math.floor((leftIdx + rightIdx) / 2)
 
         if (array[middleIdx] == target) {
             return middleIdx;
