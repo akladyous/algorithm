@@ -2,7 +2,7 @@ from typing import List
 
 def binary_search(array: List[int], target: int):
     left, right = 0, len(array)
-    while left < right:
+    while left <= right:
         middle = (left + right) // 2
         if array[middle] == target:
             return middle
@@ -77,8 +77,37 @@ def removeElement(nums: List[int], val: int) -> int:
             nums[left] = nums[right]
             left += 1
     return left
-# 
-# [3,2,2,3]
-#  
-print(removeElement([3,2,2,3], 3))
+# print(removeElement([3,2,2,3], 3))
 # print(removeElement([0,1,2,2,3,0,4,2], 2))
+
+
+def two_sum_sorted1(arr: List[int], target: int) -> List[int]:
+    for x in range(len(arr)):
+        for y in range(len(arr)):
+            if arr[x] + arr[y] == target:
+                return x,y
+# print(two_sum_sorted1([2, 3, 5, 8, 11, 15], 13))
+
+
+def two_sum_sorted(arr: List[int], target: int) -> List[int]:
+    left, right = 0, len(arr) - 1
+    while left < right:
+        if arr[left] + arr[right] == target:
+            return arr[left], arr[right]
+        if arr[left] + arr[right] < target:
+            left += 1
+        else:
+            right -= 1
+# print(two_sum_sorted([2, 3, 5, 8, 11, 15], 13))
+
+def twoSum(nums: List[int], target: int) -> List[int]:
+    hashMap = {}
+    for i, n in enumerate(nums):
+        diff = target - n
+        if diff in hashMap:
+            return [hashMap[diff], i]
+        hashMap[diff] = i
+    return 10
+print(twoSum([2,7,11,15], 9))
+print(twoSum([3,2,4], 6))
+print(twoSum([3,3], 6))
