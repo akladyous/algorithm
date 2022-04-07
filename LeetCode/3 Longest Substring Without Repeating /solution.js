@@ -16,8 +16,10 @@ function lengthOfLongestSubstring(s=new String){
     }
     return max
 };
-
-console.log(lengthOfLongestSubstring("abcabcbb"))
+console.log(lengthOfLongestSubstring("abcabcbb"));
+console.log(lengthOfLongestSubstring("abccabcabcc"));
+console.log(lengthOfLongestSubstring("aaaabaaa"));
+console.log(lengthOfLongestSubstring("pwwkew"));
 
 /*
 

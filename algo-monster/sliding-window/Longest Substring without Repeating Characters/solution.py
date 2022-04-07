@@ -3,6 +3,7 @@
 def longest_substring_without_repeating_characters(s: str) -> int:
     left = right = result = 0
     window = set()
+    result = 0
     while right < len(s):
         if not s[right] in window:
             window.add(s[right])
@@ -16,3 +17,4 @@ def longest_substring_without_repeating_characters(s: str) -> int:
 
 print(longest_substring_without_repeating_characters('abccabcabcc'))
 print(longest_substring_without_repeating_characters('aaaabaaa'))
+print(longest_substring_without_repeating_characters("pwwkew"))
