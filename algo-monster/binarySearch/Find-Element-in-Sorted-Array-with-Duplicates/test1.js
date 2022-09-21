@@ -41,5 +41,22 @@ var twoSum = function (nums, target) {
         hashMap.set(nums[i], i);
     };
 };
-
 // console.log(twoSum([2, 7, 11, 15], 17));
+function lengthOfLongestSubstring(s = new String()){
+    let left = 0
+    let right = 0
+    let result = 0
+    window = new Set()
+    while(right < s.length){
+        if(!window.has(s[right])){
+            window.add(s[right])
+            right ++
+            result = Math.max(result, window.size)
+        } else{
+            window.delete(s[left])
+            left ++
+        }
+    }
+    return result
+}
+console.log(lengthOfLongestSubstring("abcabcbb"));

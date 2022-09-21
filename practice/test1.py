@@ -108,6 +108,16 @@ def twoSum(nums: List[int], target: int) -> List[int]:
             return [hashMap[diff], i]
         hashMap[diff] = i
     return 10
-print(twoSum([2,7,11,15], 9))
-print(twoSum([3,2,4], 6))
-print(twoSum([3,3], 6))
+# print(twoSum([2,7,11,15], 9))
+# print(twoSum([3,2,4], 6))
+# print(twoSum([3,3], 6))
+
+
+def singleNumber(self, nums: List[int]):
+    singleNumber = nums[0]
+    for x in range(1, len(nums)):
+        
+
+print(singleNumber([2, 2, 1]))
+print(singleNumber([4, 1, 2, 1, 2]))
+print(singleNumber([1]))
