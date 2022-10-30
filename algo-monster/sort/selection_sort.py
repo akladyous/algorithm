@@ -5,7 +5,6 @@ unsorted_list = [5, 3, 1, 2, 4, 8, 6, 9, 7, 10]
 min_value = 5
 compare every element starting from j
 if unsorted_list[j] < unsorted_list[min_index] -> swap
-
 """
 
 
