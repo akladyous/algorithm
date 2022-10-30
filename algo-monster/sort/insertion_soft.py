@@ -1,8 +1,6 @@
 from typing import List
 
-from numpy import sort
-
-unsorted_list = [5, 3, 1, 2, 4]
+unsorted_list = [5, 3, 1, 2, 4, 8, 6, 9, 7, 10]
 
 
 def sort_list(unsorted_list: List[int]) -> List[int]:
