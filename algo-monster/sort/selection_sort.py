@@ -14,6 +14,8 @@ def selection_sort(unsorted_list: list[int]) -> list[int]:
         for j in range(i, len(unsorted_list)):
             if unsorted_list[j] < unsorted_list[min_value]:
                 min_value = j
+        unsorted_list[i], unsorted_list[min_value] = unsorted_list[min_value], unsorted_list[i]
+    return unsorted_list
 
 
 if __name__ == '__main__':
