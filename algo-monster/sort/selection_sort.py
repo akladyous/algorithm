@@ -10,6 +10,9 @@ if unsorted_list[j] < unsorted_list[min_index] -> swap
 
 
 def selection_sort(unsorted_list: list[int]) -> list[int]:
+    for i in range(len(unsorted_list)):
+        min_index = i
+        for j in range(i, len(unsorted_list)):
 
 
 if __name__ == '__main__':
