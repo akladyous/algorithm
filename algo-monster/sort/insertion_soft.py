@@ -3,7 +3,7 @@ from typing import List
 unsorted_list = [5, 3, 1, 2, 4, 8, 6, 9, 7, 10]
 
 
-def sort_list(unsorted_list: List[int]) -> List[int]:
+def insertion_sort(unsorted_list: List[int]) -> List[int]:
     for i in range(len(unsorted_list)):
         current = i
         while current > 0 and unsorted_list[current] < unsorted_list[current - 1]:
@@ -14,5 +14,5 @@ def sort_list(unsorted_list: List[int]) -> List[int]:
 
 if __name__ == '__main__':
     # unsorted_list = [int(x) for x in input().split()]
-    res = sort_list(unsorted_list)
+    res = insertion_sort(unsorted_list)
     print(' '.join(map(str, res)))
