@@ -2,7 +2,22 @@ from typing import List
 
 unsorted_list = [5, 3, 1, 2, 4, 8, 6, 9, 7, 10]
 """
-min_value = 5
+first loop starts from 0 -> left
+first supposed to be min_value so, track it with name of min_value
+second loop starts from left + 1
+left = 5 - right 3
+if
+    1- unsorted_list[j] -> (3) < unsorted_list[min_value] -> (5)
+then
+    min_value = j  -> point the min_value equal to the right index
+    now minimum value is 3
+    keep goin' j+= 1 so unsorted_list[j] = 1
+    if unsorted_list[j] -> 1 less then unsorted_list[min_value] -> 3
+    yes it is so
+    min_value = J
+
+
+meaning -> 3(right) < 5(min_value) -> then
 compare every element starting from j
 if unsorted_list[j] < unsorted_list[min_index] -> swap
 """
