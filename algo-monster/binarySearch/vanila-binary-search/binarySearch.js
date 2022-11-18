@@ -8,13 +8,13 @@ function binarySearch(array = new Array(), target) {
             return middleIdx;
         }
 
-        if(array[middleIdx] < target){
+        if (array[middleIdx] < target) {
             leftIdx = middleIdx + 1;
-        } else{
+        } else {
             rightIdx = middleIdx - 1;
         };
     }
     return -1;
 }
 
-console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 6));
+console.log(binarySearch([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], 4));
