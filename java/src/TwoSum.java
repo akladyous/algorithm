@@ -1,10 +1,11 @@
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class Solution {
+
+public class TwoSum {
 
     public static void main(String[] args) {
-        int[] result = twoSum(new int[]{2,7,11,15});
+        int[] result = twoSum(new int[]{2,7,11,15}, 9);
         System.out.println(Arrays.toString(result));
     }
 
@@ -13,11 +14,10 @@ public class Solution {
         for (int i = 0; i < nums.length; i++) {
             int diff = target - nums[i];
             if (indices.containsKey(diff)) {
-                return indices.get(diff);
-            } else {
-                indices.put(i, i);
+                return new int[] { diff, indices.get(diff)};
             }
+            indices.put(nums[i], i);
         }
-
+        return null;
     }
 }
