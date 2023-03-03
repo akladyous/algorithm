@@ -1,7 +1,6 @@
 import java.util.Arrays;
 import java.util.HashMap;
 
-
 public class TwoSum {
 
     public static void main(String[] args) {
