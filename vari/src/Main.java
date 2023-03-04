@@ -3,7 +3,6 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        WeakHashMap<Integer, Integer> whm = new WeakHashMap<>();
 
     }
 }
