@@ -4,12 +4,12 @@ public class LongestPalindromicSubstring {
 //        System.out.println(isPalindrome("a"));
 //        System.out.println(isPalindrome("aa"));
 //        System.out.println(isPalindrome("ab"));
+        System.out.println(prova("a"));
+        System.out.println(prova("ab"));
         System.out.println(prova("abc"));
-        System.out.println(solution("ab"));
-        System.out.println(solution("a"));
-        System.out.println(solution("babad"));
-        System.out.println(solution("bab"));
-        System.out.println(solution("cbbd"));
+        System.out.println(prova("babad"));
+        System.out.println(prova("bab"));
+        System.out.println(prova("cbbd"));
     }
     public static String prova(String s) {
         String result = "";
@@ -17,7 +17,7 @@ public class LongestPalindromicSubstring {
         for (int i=0; i< s.length(); i++) {
             int left = i;
             int right = i;
-            while ( i >= 0 && right < s.length() && s.charAt(i) == s.charAt(right) ) {
+            while ( left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right) ) {
                 if ( right - left + 1 > resultLen ) {
                     result = s.substring(left, right + 1);
                     resultLen = right - left + 1;
@@ -27,7 +27,7 @@ public class LongestPalindromicSubstring {
             }
             left = i;
             right = i + 1;
-            while ( i >= 0 && right < s.length() && s.charAt(left) == s.charAt(right) ) {
+            while ( left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right) ) {
                 if ( right - left + 1 > resultLen ) {
                     result = s.substring(left, right + 1);
                     resultLen = right - left + 1;
