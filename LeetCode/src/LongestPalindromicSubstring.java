@@ -24,6 +24,8 @@ public class LongestPalindromicSubstring {
         return r;
     }
 
+
+
     public static String solution(String s) {
         int left, right;
         Boolean isPalindrome = false;
