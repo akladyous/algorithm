@@ -1,9 +1,9 @@
 public class LongestPalindromicSubstring {
 
     public static void main(String[] args) {
-        System.out.println(isPalindrome("a"));
-        System.out.println(isPalindrome("aa"));
-        System.out.println(isPalindrome("ab"));
+//        System.out.println(isPalindrome("a"));
+//        System.out.println(isPalindrome("aa"));
+//        System.out.println(isPalindrome("ab"));
         System.out.println(isPalindrome("abc"));
         System.out.println(solution("ab"));
         System.out.println(solution("a"));
@@ -11,19 +11,31 @@ public class LongestPalindromicSubstring {
         System.out.println(solution("bab"));
         System.out.println(solution("cbbd"));
     }
+
     public static int isPalindrome(String s) {
-        if ( s.length() == 1 ) return 1;
+        if (s.length() == 1) return 1;
+        Boolean isEven = s.length() % 2 == 0;
+
         int left  = s.length() / 2;
         int right = s.length() / 2;
-        if ( s.length() % 2 == 0) left -- ;
-        while ( left >= 0 && left < right && right < s.length() && s.charAt(left) == s.charAt(right) ) {
+        if ( isEven ) {
             left --;
+        } else {
+            left  --;
             right ++;
+        }
+        while (
+                left >= 0
+                        && (left < right)
+                        && (right < s.length())
+                        && (s.charAt(left) == s.charAt(right))
+        ) {
+            left--;
+            right++;
         }
         int r = right - left - 1;
         return r;
     }
-
 
 
     public static String solution(String s) {
@@ -34,25 +46,26 @@ public class LongestPalindromicSubstring {
 
         left = s.length() / 2;
         right = s.length() / 2;
-        if ( s.length() % 2 == 0) {
-            left -- ;
+        if (s.length() % 2 == 0) {
+            left--;
         }
-        while ( left >= 0 && left<= right && right < s.length()  ) {
+        while (left >= 0 && left <= right && right < s.length()) {
             String leftChar = String.valueOf(s.charAt(left));
             String rightChar = String.valueOf(s.charAt(right));
-            if ( s.charAt(left) == s.charAt(right)) {
+            if (s.charAt(left) == s.charAt(right)) {
                 palindrom[left] = s.charAt(left);
                 palindrom[right] = s.charAt(right);
                 isPalindrome = true;
             } else {
                 break;
-            };
-            left --;
-            right ++;
+            }
+            ;
+            left--;
+            right++;
 
         }
         if (isPalindrome == true) {
-            return s.substring(left+1, right-1);
+            return s.substring(left + 1, right - 1);
         } else {
             return "";
         }
