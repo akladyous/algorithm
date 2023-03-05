@@ -5,7 +5,7 @@ def longestPalindrome(s: str):
     resultLen = 0
     for i in range(len(s)):
         left, right = i, i
-        while i >= 0 and right < len(s) and s[i] == s[right]:
+        while i >= 0 and right < len(s) and s[left] == s[right]:
             if(right - left + 1) > resultLen:
                 result = s[left : right + 1]
                 resultLen = right - left + 1
