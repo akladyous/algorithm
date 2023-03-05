@@ -1,15 +1,32 @@
 public class LongestPalindromicSubstring {
 
     public static void main(String[] args) {
-//        System.out.println(isPalindrome("a"));
-//        System.out.println(isPalindrome("aa"));
-//        System.out.println(isPalindrome("ab"));
-        System.out.println(prova("a"));
-        System.out.println(prova("ab"));
-        System.out.println(prova("abc"));
-        System.out.println(prova("babad"));
-        System.out.println(prova("bab"));
-        System.out.println(prova("cbbd"));
+        System.out.println(isPalindrome("a"));
+        System.out.println(isPalindrome("aa"));
+        System.out.println(isPalindrome("ab"));
+//        System.out.println(prova("a"));
+//        System.out.println(prova("ab"));
+//        System.out.println(prova("abc"));
+//        System.out.println(prova("babad"));
+//        System.out.println(prova("bab"));
+//        System.out.println(prova("cbbd"));
+    }
+    public static String isPalindrome(String s) {
+        if (s.length() == 1) return "";
+        int left  = s.length() / 2;
+        int right = s.length() / 2;
+        if (s.length() % 2 == 0) left--;
+        String result = new String();
+        while (
+                left >= 0
+                        && (left < right)
+                        && (right < s.length())
+                        && (s.charAt(left) == s.charAt(right))
+        ) {
+            result = s.substring(left, right + 1);
+        }
+
+        return result;
     }
     public static String prova(String s) {
         String result = "";
@@ -39,32 +56,7 @@ public class LongestPalindromicSubstring {
         return result;
     }
 
-    public static int isPalindrome(String s) {
-        if (s.length() == 1) return 1;
-        int left  = s.length() / 2;
-        int right = s.length() / 2;
-        Boolean isEven = s.length() % 2 == 0;
-//        if ( isEven ) {
-//            left --;
-//        } else {
-//            left  --;
-//            right ++;
-//        }
-        if (s.length() % 2 == 0) {
-            left--;
-        }
-        while (
-                left >= 0
-                        && (left < right)
-                        && (right < s.length())
-                        && (s.charAt(left) == s.charAt(right))
-        ) {
-            left--;
-            right++;
-        }
-        int r = right - left - 1;
-        return r;
-    }
+
 
 
     public static String solution(String s) {
