@@ -1,32 +1,30 @@
 public class LongestPalindromicSubstring {
 
     public static void main(String[] args) {
-        System.out.println(isPalindrome("a"));
-        System.out.println(isPalindrome("aa"));
-        System.out.println(isPalindrome("ab"));
-//        System.out.println(prova("a"));
-//        System.out.println(prova("ab"));
-//        System.out.println(prova("abc"));
-//        System.out.println(prova("babad"));
-//        System.out.println(prova("bab"));
-//        System.out.println(prova("cbbd"));
+//        System.out.println("isPalindrome   a   : " + isPalindrome("a"));
+//        System.out.println("isPalindrome   aa  : " + isPalindrome("aa"));
+//        System.out.println("isPalindrome   ab  : " + isPalindrome("ab"));
+//        System.out.println("isPalindrome   abc : " + isPalindrome("abc"));
+//        System.out.println("isPalindrome   aba : " + isPalindrome("aba"));
+        System.out.println("isPalindrome babad : " + isPalindrome("babad"));
+//        System.out.println("isPalindrome   bab : " + isPalindrome("bab"));
+//        System.out.println("isPalindrome  cbbd : " + isPalindrome("cbbd"));
     }
     public static String isPalindrome(String s) {
-        if (s.length() == 1) return "";
-        int left  = s.length() / 2;
-        int right = s.length() / 2;
+        int left  = s.length() / 2, right = left;
         if (s.length() % 2 == 0) left--;
-        String result = new String();
+        String palindrome = new String();
         while (
                 left >= 0
-                        && (left < right)
-                        && (right < s.length())
-                        && (s.charAt(left) == s.charAt(right))
+                && (left <= right)
+                && (right < s.length())
+                && (s.charAt(left) == s.charAt(right))
         ) {
-            result = s.substring(left, right + 1);
+            if (right - left >= 1) palindrome = s.substring(left, right + 1);
+            left --;
+            right ++;
         }
-
-        return result;
+        return palindrome;
     }
     public static String prova(String s) {
         String result = "";
