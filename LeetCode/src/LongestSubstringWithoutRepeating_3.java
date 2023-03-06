@@ -1,7 +1,7 @@
 import java.util.HashSet;
 
 // https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
-public class LongestSubstringWithoutRepeating {
+public class LongestSubstringWithoutRepeating_3 {
 
     public static void main(String[] args) {
         int result = solution("abcabcbb");

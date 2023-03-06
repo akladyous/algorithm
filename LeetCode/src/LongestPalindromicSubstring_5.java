@@ -1,5 +1,5 @@
 // https://leetcode.com/problems/longest-palindromic-substring/description/
-public class LongestPalindromicSubstring {
+public class LongestPalindromicSubstring_5 {
 
     public static void main(String[] args) {
         System.out.println("longestPalindrome   a   : " + longestPalindrome("a"));
