@@ -1,5 +1,4 @@
-public class ISOGram {
-
+public class IsIsoGram {
     public static  boolean solution_I(String str){
         // solution 1 with array of boolean's
         boolean[] charSet = new boolean[128]; //128 is the length of ascii table
