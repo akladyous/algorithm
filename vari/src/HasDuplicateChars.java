@@ -5,7 +5,6 @@ public class HasDuplicateChars {
     public static boolean hasDuplicateChars(String str) {
         // Create a boolean array to keep track of characters seen
         boolean[] charSet = new boolean[128];
-
         // Iterate through each character in the string
         for (int i = 0; i < str.length(); i++) {
             int val = str.charAt(i);
