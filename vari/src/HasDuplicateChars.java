@@ -30,4 +30,5 @@ public class HasDuplicateChars {
             charCounts[i - 97] ++ ;
         }
     }
-}
+
+};
