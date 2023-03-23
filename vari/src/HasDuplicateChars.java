@@ -18,6 +18,7 @@ public class HasDuplicateChars {
         }
         // If no duplicate characters were found, return false
         return false;
-    };
+    }
+
 
 };
