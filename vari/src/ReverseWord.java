@@ -9,7 +9,6 @@ public class ReverseWord {
 
     public static String reverseWord(String original) {
         String result = "";
-        String stack="";
         int left = 0;
         int right;
 
@@ -35,5 +34,12 @@ public class ReverseWord {
             words[word] = String.valueOf(reversedWord);
         }
         return String.join(" ", words);
+    }
+
+    public static String solution(String original) {
+        String reversed = "";
+
+
+        return reversed;
     }
 }
