@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/algoExpert/algoExpert.iml" filepath="$PROJECT_DIR$/algoExpert/algoExpert.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algoMonster/algoMonster.iml" filepath="$PROJECT_DIR$/algoMonster/algoMonster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/algorithm.iml" filepath="$PROJECT_DIR$/algorithm.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java/java.iml" filepath="$PROJECT_DIR$/java/java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/leetCode/leetCode.iml" filepath="$PROJECT_DIR$/leetCode/leetCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/vari/vari.iml" filepath="$PROJECT_DIR$/vari/vari.iml" />
+    </modules>
+  </component>
+</project>
