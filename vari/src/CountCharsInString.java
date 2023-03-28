@@ -6,11 +6,8 @@ public class CountCharsInString {
 
 
     public static void main(String[] args) {
-//        solution1("aaaA");
         System.out.println(Arrays.toString(solution1("hello")));
         System.out.println(Arrays.toString(solution2("hello world")));
-//        System.out.println(solution3("Hello world"));
-
     }
 
     // assuming all chars in s string are lowercase
