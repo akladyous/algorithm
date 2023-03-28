@@ -1,4 +1,11 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class CountCharsInString {
+
+    public static void main(String[] args) {
+        solution1("aaaA");
+    }
 
 
     public static void solution1(String s) {
@@ -15,5 +22,15 @@ public class CountCharsInString {
             charCounts[c - 'a'] ++;
         };
     };
+
+
+    public static Map<Character, Integer> countCharacters(String input) {
+        Map<Character, Integer> charCounts = new HashMap<>();
+        for (int i = 0; i < input.length(); i++) {
+            char c = input.charAt(i);
+            charCounts.put(c, charCounts.getOrDefault(c, 0) + 1);
+        }
+        return charCounts;
+    }
 
 }
