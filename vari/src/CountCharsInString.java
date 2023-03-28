@@ -37,4 +37,11 @@ public class CountCharsInString {
         return charCounts;
     }
 
+    public static Map<Character, Integer> solution3(String input) {
+        Map<Character, Integer> charsCount = new HashMap<>();
+        for (char c : input.toCharArray()) {
+            charsCount.put(c,charsCount.getOrDefault(c,0) + 1);
+            charsCount.computeIfAbsent(c, k -> 1);
+        }
+    }
 }
