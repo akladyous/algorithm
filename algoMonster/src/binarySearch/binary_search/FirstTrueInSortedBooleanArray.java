@@ -4,7 +4,7 @@ import java.util.List;
 
 public class FirstTrueInSortedBooleanArray {
     public static void main(String[] args) {
-
+        System.out.println(findBoundary(List.of(false, false, false, true, true, true)));
     }
 
     // [ F, F, F, T, T ,T ]
@@ -15,8 +15,13 @@ public class FirstTrueInSortedBooleanArray {
         int boundary = -1;
         while ( left <= right ) {
             int middle = left + ( right - left ) / 2;
-
+            if ( arr.get(middle) ) {
+                boundary = middle;
+                right = middle - 1;
+            } else {
+                left = middle + 1;
+            }
         }
-
+    return boundary;
     }
 }
