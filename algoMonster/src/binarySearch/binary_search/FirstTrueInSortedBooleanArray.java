@@ -7,7 +7,7 @@ public class FirstTrueInSortedBooleanArray {
         System.out.println(findBoundary(List.of(false, false, false, false, true, true, true)));
     }
 
-    // [ F, F, F, T, T ,T ]
+    // [ F, F, F, F, T, T ,T ]
     // size 6 - middle = (0 + 5) / 2 = 2
     public static int findBoundary(List<Boolean> arr) {
         int left = 0;
