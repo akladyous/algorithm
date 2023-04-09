@@ -4,11 +4,11 @@ import java.util.List;
 
 public class FindElementInSortedArrayWithDuplicates {
     public static void main(String[] args) {
-        System.out.println(findFirstOccurrence(List.of(1, 3, 3, 3, 3, 6, 10, 10, 10, 100), 3));
+        System.out.println(findFirstOccurrence(List.of(1, 3, 3, 3, 3, 4, 6, 10, 10, 10, 100), 6));
     }
     /*
     arr = [1, 3, 3, 3, 3, 6, 10, 10, 10, 100]
-                       |                        1st iteration
+                       |                        1st iteration®´
     */
     public static int findFirstOccurrence(List<Integer> arr, int target) {
         int left = 0;
