@@ -12,16 +12,16 @@ public class FirstTrueInSortedBooleanArray {
     public static int findBoundary(List<Boolean> arr) {
         int left = 0;
         int right = arr.size() - 1;
-        int boundary = -1;
-        while ( left <= right ) {
-            int middle = left + ( right - left ) / 2;
-            if ( arr.get(middle) ) {
-                boundary = middle;
-                right = middle - 1;
+        int boundaryIndex = -1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (arr.get(mid)) {
+                boundaryIndex = mid;
+                right = mid - 1;
             } else {
-                left = middle + 1;
+                left = mid + 1;
             }
         }
-    return boundary;
+        return boundaryIndex;
     }
 }
