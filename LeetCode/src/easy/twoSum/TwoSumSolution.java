@@ -1,7 +1,10 @@
+package easy.twoSum;
+
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class TwoSum {
+public class TwoSumSolution {
+
     public static void main(String[] args) {
         int[] result;
 
@@ -17,14 +20,16 @@ public class TwoSum {
     }
 
     public static int[] twoSum(int[] nums, int target) {
+
         HashMap<Integer, Integer> indices = new HashMap<>();
-        for (int i=0; i<nums.length; i++) {
+        for (int i=0; i < nums.length; i++) {
             int diff = target - nums[i];
-            if ( indices.containsKey(diff) ) {
-                return new int[] { indices.get(diff), i };
+            if (indices.containsKey(diff)) {
+                return new int[] {indices.get(diff), i};
             }
-            indices.put( nums[i], i );
+            indices.put(nums[i], i);
         }
-        return null;
     }
 }
+
+// {2:0}
