@@ -29,6 +29,7 @@ public class TwoSumSolution {
             }
             indices.put(nums[i], i);
         }
+        return null;
     }
 }
 
