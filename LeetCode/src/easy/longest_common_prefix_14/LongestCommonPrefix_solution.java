@@ -13,13 +13,16 @@ public class LongestCommonPrefix_solution {
     }
 
     public static String longestCommonPrefix(String[] strs) {
-
-
-        String prefix = "";
-        for (char c : strs[0].toCharArray()) {
-            
+        if (strs == null || strs.length == 0) {
+            return "";
         }
 
+        String prefix = "";
+        StringBuffer sb = new StringBuffer(strs[0]);
+
+        for (int i=1; i < strs.length; i++) {
+            while ( !strs[i].startsWith(prefix));
+        }
         return null;
     }
 }
