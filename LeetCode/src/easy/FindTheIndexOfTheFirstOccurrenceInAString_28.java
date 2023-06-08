@@ -33,25 +33,9 @@ public class FindTheIndexOfTheFirstOccurrenceInAString_28 {
                 if (j == needleLength) {
                     return i;
                 }
-            }
+            } //
         }
-
         return -1;
     }
 
-    public static int findFirstOccurrenceTest(String haystack, String needle) {
-        for(int i=0; i < haystack.length() - needle.length() + 1; i ++) {
-//            for(int j=i; j < i + needle.length(); j++) {
-//                System.out.println("i: " + i + " j: " + j + " " + String.valueOf(haystack.charAt(j)));
-//            }
-            for(int j=0; j< needle.length(); j++) {
-                char stackChar  = haystack.charAt(i+j);
-                char needleChar = needle.charAt(j);
-                System.out.println("haystack char: " + String.valueOf(stackChar));
-                System.out.println("needle   char: " + String.valueOf(needleChar));
-            }
-            System.out.println("-".repeat(40));
-        }
-        return 1;
-    }
 }
