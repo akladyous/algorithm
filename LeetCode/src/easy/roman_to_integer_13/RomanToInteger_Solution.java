@@ -1,6 +1,6 @@
-package easy.thirteen_roman_to_integer;
+package easy.roman_to_integer_13;
 
-public class RomanToInteger_Solution {
+public class RomanToInteger_solution {
     public static void main(String[] args) {
         String romanNumeral1 = "XXIV";
         int result1 = romanToInteger(romanNumeral1);

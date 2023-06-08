@@ -1,6 +1,6 @@
-package easy.nine_palindrome_number;
+package easy.palindrome_number_9;
 
-public class PalindromeNumberSolutionTwo {
+public class PalindromeNumber_solution {
 
     public static void main(String[] args) {
         System.out.println(isPalindrome(121));
@@ -20,6 +20,4 @@ public class PalindromeNumberSolutionTwo {
         }
         return true;
     }
-
-
 }

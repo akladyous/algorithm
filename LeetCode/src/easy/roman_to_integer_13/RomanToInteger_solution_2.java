@@ -1,4 +1,4 @@
-package easy.thirteen_roman_to_integer;
+package easy.roman_to_integer_13;
 import java.util.HashMap;
 
 public class RomanToInteger_solution_2 {

@@ -1,9 +1,9 @@
-package easy.one_two_sum;
+package easy.two_sum_1;
 
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class TwoSum_Solution {
+public class TwoSum_solution {
 
     public static void main(String[] args) {
         int[] result;
