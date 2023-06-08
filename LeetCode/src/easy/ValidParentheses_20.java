@@ -1,9 +1,9 @@
-package easy.valid_parentheses_20;
+package easy;
 
 import java.util.HashMap;
 import java.util.Stack;
 
-public class ValidParentheses_solution {
+public class ValidParentheses_20 {
     public static void main(String[] args) {
         String s1 = "()";
         String s2 = "()[]{}";

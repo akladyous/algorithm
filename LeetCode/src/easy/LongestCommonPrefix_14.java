@@ -1,6 +1,6 @@
-package easy.longest_common_prefix_14;
+package easy;
 
-public class LongestCommonPrefix_solution {
+public class LongestCommonPrefix_14 {
 
     public static void main(String[] args) {
         String[] strs1 = {"flower", "flow", "flight"};
