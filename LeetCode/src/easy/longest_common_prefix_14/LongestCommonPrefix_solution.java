@@ -37,11 +37,3 @@ public class LongestCommonPrefix_solution {
         return prefix;
     }
 }
-/*
-    The time complexity should be O( W * L),
-    where W is the number of string(words) in the input array strs,
-    and L is the length of the longest string(word) in strs.
-
-
-
- */
