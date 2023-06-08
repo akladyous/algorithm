@@ -7,7 +7,6 @@ public class CountCharsInString {
         System.out.println(Arrays.toString(solution1("hello")));
         System.out.println(Arrays.toString(solution2("hello world")));
     }
-
     // assuming all chars in s string are lowercase
     public static int[] solution1(String input) {
         int[] charCounts = new int[26];
