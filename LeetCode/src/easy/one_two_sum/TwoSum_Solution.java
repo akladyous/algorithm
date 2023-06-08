@@ -3,7 +3,7 @@ package easy.one_two_sum;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class TwoSumSolution {
+public class TwoSum_Solution {
 
     public static void main(String[] args) {
         int[] result;
