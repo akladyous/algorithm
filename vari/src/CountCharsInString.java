@@ -3,8 +3,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CountCharsInString {
-
-
     public static void main(String[] args) {
         System.out.println(Arrays.toString(solution1("hello")));
         System.out.println(Arrays.toString(solution2("hello world")));
