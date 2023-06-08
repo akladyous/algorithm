@@ -1,4 +1,6 @@
-public class IsPalindrome125 {
+package easy;
+
+public class IsPalindrome_125 {
 
     public static void main(String[] args) {
         String s1 = "A man, a plan, a canal: Panama";
@@ -31,7 +33,6 @@ public class IsPalindrome125 {
                 right--;
             }
         }
-
         return true;
     }
 }
