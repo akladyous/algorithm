@@ -23,6 +23,7 @@ public class TwoSum_1 {
 
     public static int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> indices = new HashMap<>();
+
         for (int i=0; i < nums.length; i++) {
             int diff = target - nums[i];
             if (indices.containsKey(diff)) {
@@ -31,6 +32,7 @@ public class TwoSum_1 {
             indices.put(nums[i], i);
         }
         return null;
+
     }
 }
 
