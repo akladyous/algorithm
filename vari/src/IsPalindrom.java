@@ -32,7 +32,11 @@ public class IsPalindrom {
     public static Boolean solution2(String str) {
         int left = str.length() /2, right = left;
         if (str.length() %2 == 0) left--;
-        while ( left >= 0 && left <= right && right < str.length() ) {
+        while (
+                left >= 0 &&
+                left <= right &&
+                right < str.length()
+        ) {
             if ( str.charAt(left) != str.charAt(right) ) return false;
             left --;
             right ++;
