@@ -16,6 +16,19 @@ public class Practice {
         System.out.println(maxProfit(prices3)); // 0
     }
     public static int maxProfit(int[] prices) {
+        int maxProfit = 0;
+        int left = 0;
+        int right = 0;
+        /*
+            [2,1,2,1,0,1,2]
+             L<R -> false       -> increment Left and Right pointers
+            [2,1,2,1,0,1,2]
+               L<R -> true      -> update maxProfit with [right - left] 2-1
+                                -> increment Right pointer
 
+        */
+
+
+        return maxProfit;
     }
 }
