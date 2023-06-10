@@ -12,6 +12,10 @@ public class RomanToInteger_13 {
         int result2 = romanToInteger(romanNumeral2);
         System.out.println(result2);
 
+        String romanNumeral3 = "IIIIII";
+        int result3 = romanToInteger(romanNumeral3);
+        System.out.println(result3);
+
     }
 
     public static int romanToInteger(String s) {

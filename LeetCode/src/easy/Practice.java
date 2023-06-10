@@ -20,11 +20,7 @@ public class Practice {
     }
     static int _13(String s) {
 
-        for (int i=0; i < s.length(); i++) {
-            switch (s.charAt(i)) {
-
-            }
-        }
+        return 1;
     }
 
     static void _1_test(){
