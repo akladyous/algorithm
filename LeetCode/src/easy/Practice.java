@@ -5,7 +5,26 @@ import java.util.HashMap;
 
 public class Practice {
     public static void main(String[] args) {
-        _1_test();
+        _13_test();
+    }
+
+
+    static void _13_test(){
+        String romanNumeral1 = "XXIV";
+        int result1 = _13(romanNumeral1);
+        System.out.println(result1);
+
+        String romanNumeral2 = "MCMLXXIV";
+        int result2 = _13(romanNumeral2);
+        System.out.println(result2);
+    }
+    static int _13(String s) {
+
+        for (int i=0; i < s.length(); i++) {
+            switch (s.charAt(i)) {
+
+            }
+        }
     }
 
     static void _1_test(){
