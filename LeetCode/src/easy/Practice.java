@@ -6,6 +6,7 @@ import java.util.HashMap;
 public class Practice {
     public static void main(String[] args) {
         _13_test();
+        Integer.toString(2);
     }
 
 
