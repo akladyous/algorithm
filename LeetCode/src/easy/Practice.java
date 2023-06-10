@@ -1,15 +1,44 @@
 package easy;
 
+import java.util.Arrays;
+import java.util.HashMap;
+
 public class Practice {
     public static void main(String[] args) {
-        _121_test();
+        _1_test();
     }
 
     static void _1_test(){
-        _1()
+        int[] result;
+
+        result = _1(new int[]{2,7,11,15}, 9);
+        System.out.println(Arrays.toString(result));
+
+        result = _1(new int[]{3,1,5,6,4,3}, 6);
+        System.out.println(Arrays.toString(result));
+
+        result = _1(new int[]{3,2,4}, 6);
+        System.out.println(Arrays.toString(result));
     }
     static int[] _1(int[] nums, int target){
-
+        HashMap<Integer, Integer> indices = new HashMap<>();
+        /*
+            [2,7,11,15], 9
+            9 - 2 = 7
+            {}
+            check if hashmap container 7, then return index of 7 and current index in the loop
+            otherwise add the first number in the array and its index to the hashmap
+            {2:0}
+            2nd iteration 9-7 = 2 -> 2 in hashmap so return the index of 2 from the hashmap and the current index
+        */
+        for (int i = 0; i < nums.length; i++){
+            int diff = target - nums[i];
+            if (indices.containsKey(diff)) {
+                return new int[] { indices.get(diff), i };
+            }
+            indices.put(nums[i], i);
+        }
+        return null;
     }
 
 
@@ -49,3 +78,4 @@ public class Practice {
         return maxProfit;
     }
 }
+
