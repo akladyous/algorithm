@@ -20,6 +20,8 @@ public class Practice {
         int left = 0;
         int right = 1;
         /*
+            - increment the left pointer
+            - each iteration increment the right pointer by one in all cases.
             [2,1,2,1,0,1,2]
              L<R -> false       -> increment Left and Right pointers
             [2,1,2,1,0,1,2]
