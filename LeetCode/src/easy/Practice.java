@@ -10,17 +10,32 @@ public class Practice {
 
 
     static void _13_test(){
-        String romanNumeral1 = "XXIV";
-        int result1 = _13(romanNumeral1);
-        System.out.println(result1);
-
-        String romanNumeral2 = "MCMLXXIV";
-        int result2 = _13(romanNumeral2);
-        System.out.println(result2);
+        System.out.println(_13("XXIV")); //24
+        System.out.println(_13("MCMXCIV")); //1994
+        System.out.println(_13("LVIII")); //58
     }
     static int _13(String s) {
-
-        return 1;
+        int currentValue = 0;
+        int prevValue = 0;
+        int result = 0;
+        for (int i=s.length() - 1; i >= 0; i--) {
+            switch(s.charAt(i)) {
+                case 'I' -> currentValue = 1;
+                case 'V' -> currentValue = 5;
+                case 'X' -> currentValue = 10;
+                case 'L' -> currentValue = 50;
+                case 'C' -> currentValue = 100;
+                case 'D' -> currentValue = 500;
+                case 'M' -> currentValue = 1000;
+            }
+            if (currentValue >= prevValue) {
+                result += currentValue;
+            } else {
+                result -= currentValue;
+            }
+            prevValue = currentValue;
+        }
+        return result;
     }
 
     static void _1_test(){
