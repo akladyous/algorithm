@@ -1,4 +1,4 @@
-package easy;
+package easy.leetcode_20_ValidParentheses;
 
 import java.util.HashMap;
 import java.util.Stack;

@@ -1,8 +1,8 @@
-package easy;
+package easy.leetcode_13_RomanToInteger;
 
 import java.util.HashMap;
 
-public class RomanToInteger_13 {
+public class Solution {
     public static void main(String[] args) {
         String romanNumeral1 = "XXIV";
         int result1 = romanToInteger(romanNumeral1);
@@ -44,7 +44,7 @@ public class RomanToInteger_13 {
         return result;
     }
 }
-
+//-----------------------------------------------------------
 
 class RomanToInteger_solution_2 {
     public static void main(String[] args) {

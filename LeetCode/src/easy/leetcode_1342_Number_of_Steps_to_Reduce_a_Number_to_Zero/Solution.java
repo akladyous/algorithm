@@ -1,8 +1,6 @@
-package easy;
+package easy.leetcode_1342_Number_of_Steps_to_Reduce_a_Number_to_Zero;
 
-public class Number_of_Steps_to_Reduce_a_Number_to_Zero_1342 {
-    public static void main(String[] args) {
-    }
+public class Solution {
 
     public static int number_of_Steps_to_Reduce_a_Number_to_Zero_1342(int num) {
         int steps = 0;

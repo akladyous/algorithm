@@ -1,6 +1,6 @@
-package easy;
+package easy.leetcode_125_IsPalindrome;
 
-public class IsPalindrome_125 {
+public class Solution {
 
     public static void main(String[] args) {
         String s1 = "A man, a plan, a canal: Panama";

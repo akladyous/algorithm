@@ -10,7 +10,7 @@ class ListNode {
 
 
 
-public class MergeTwoSortedLists_21 {
+public class Solution {
     public static void main(String[] args) {
         // Create example lists: list1 = [1, 2, 4], list2 = [1, 3, 4]
         ListNode list1 = new ListNode(1);

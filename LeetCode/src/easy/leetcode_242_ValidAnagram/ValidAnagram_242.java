@@ -1,4 +1,4 @@
-package easy;
+package easy.leetcode_242_ValidAnagram;
 
 public class ValidAnagram_242 {
     public static void main(String[] args) {

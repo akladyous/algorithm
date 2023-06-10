@@ -1,4 +1,4 @@
-package medium;
+package medium.leetcode_347_TopKFrequentElements;
 import java.util.HashMap;
 
 // -----------------> not completed <-----------------

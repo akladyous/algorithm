@@ -1,3 +1,5 @@
+package medium.leetcode_3_LongestSubstringWithoutRepeating;
+
 import java.util.HashSet;
 
 // https://leetcode.com/problems/longest-substring-without-repeating-characters/description/

@@ -1,3 +1,5 @@
+package medium.leetcode_26_RemoveDuplicatesfromSortedArray;
+
 public class RemoveDuplicatesfromSortedArray26 {
     public static void main(String[] args) {
 

@@ -1,6 +1,6 @@
-package easy;
+package easy.leetcode_1672_Richest_Customer_Wealth;
 
-public class Richest_Customer_Wealth_1672 {
+public class Solution {
     public static void main(String[] args) {
         int[][] accounts1 = {{1, 2, 3}, {3, 2, 1}};
         int maxWealth1 = maximumWealth(accounts1);

@@ -1,4 +1,4 @@
-package easy;
+package easy.leetcode_2396_Strictly_Palindromic_Number;
 
 public class Strictly_Palindromic_Number_2396 {
     public static void main(String[] args) {

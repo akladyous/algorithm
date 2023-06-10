@@ -1,10 +1,6 @@
-package easy;
+package easy.leetcode_26_RemoveDuplicatesFromSortedArray;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.List;
-
-public class RemoveDuplicatesFromSortedArray_26 {
+public class Solution {
 
     public static void main(String[] args) {
         int[] nums1 = {1, 1, 2};

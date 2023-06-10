@@ -1,3 +1,5 @@
+package medium.leetcode_5_LongestPalindromicSubstring;
+
 // https://leetcode.com/problems/longest-palindromic-substring/description/
 // https://www.youtube.com/watch?v=y2BD4MJqV20&t=1s
 public class LongestPalindromicSubstring_5 {

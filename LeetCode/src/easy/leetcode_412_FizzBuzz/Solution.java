@@ -1,8 +1,8 @@
-package easy;
+package easy.leetcode_412_FizzBuzz;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FizzBuzz_412 {
+public class Solution {
     public static void main(String[] args) {
         int n = 9;
         List<String> fizzBuzzList = fizzBuzz(n);

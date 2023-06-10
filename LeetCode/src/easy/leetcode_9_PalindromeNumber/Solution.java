@@ -1,7 +1,6 @@
-package easy;
+package easy.leetcode_9_PalindromeNumber;
 
-public class PalindromeNumber_9 {
-
+public class Solution {
     public static void main(String[] args) {
         System.out.println(isPalindrome(121));
         System.out.println(isPalindrome(1410110141));
@@ -21,7 +20,9 @@ public class PalindromeNumber_9 {
         return true;
     }
 }
-//-------------------------
+
+
+//----------------------------------------------------------------------
 class PalindromeNumber_solution_2 {
     public static void main(String[] args) {
         System.out.println(isPalindrome(121));

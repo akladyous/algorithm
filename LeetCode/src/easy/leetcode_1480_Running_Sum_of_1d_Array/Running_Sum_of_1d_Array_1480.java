@@ -1,4 +1,4 @@
-package easy;
+package easy.leetcode_1480_Running_Sum_of_1d_Array;
 
 import java.util.Arrays;
 

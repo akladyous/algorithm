@@ -1,8 +1,8 @@
-package easy;
+package easy.leetcode_66_PlusOne;
 
 import java.util.Arrays;
 
-public class PlusOne_66 {
+public class Solution {
 
     public static void main(String[] args) {
         int[] digits1 = {1, 2, 3};
