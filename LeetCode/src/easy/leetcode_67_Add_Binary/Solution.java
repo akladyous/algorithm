@@ -1,6 +1,6 @@
-package easy;
+package easy.leetcode_67_Add_Binary;
 
-public class AddBinady_67 {
+public class Solution {
 
     public static void main(String[] args) {
         // Test Case 1

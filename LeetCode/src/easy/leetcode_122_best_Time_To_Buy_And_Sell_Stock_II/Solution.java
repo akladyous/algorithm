@@ -1,6 +1,6 @@
-package easy;
+package easy.leetcode_122_best_Time_To_Buy_And_Sell_Stock_II;
 
-public class Best_Time_To_Buy_And_Sell_Stock_II_122 {
+public class Solution {
     public static void main(String[] args) {
         int[] prices1 = {7, 1, 5, 3, 6, 4};
         int maxProfit1 = maxProfit(prices1);
