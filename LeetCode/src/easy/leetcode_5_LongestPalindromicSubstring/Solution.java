@@ -36,12 +36,7 @@ public class Solution {
 
         return s.substring(start, end + 1);
     }
-    private int[] extend(final String s, int i, int j) {
-        for (; i >= 0 && j < s.length(); --i, ++j)
-            if (s.charAt(i) != s.charAt(j))
-                break;
-        return new int[] {i + 1, j - 1};
-    }
+
     static int expandAroundCenter(String s, int left, int right) {
         boolean leftGT = left >= 0;
         boolean rightLT = right < s.length();
