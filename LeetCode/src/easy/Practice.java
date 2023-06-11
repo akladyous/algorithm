@@ -5,17 +5,23 @@ import java.util.HashMap;
 
 public class Practice {
   public static void main(String[] args) {
-    expandFromMiddle("sa", 0, 0);
+    String s1 = "racecar";
+    for (int i = 0; i < s1.length(); i++) {
+      int len1 = expandFromMiddle("sa", i, i);
+      int len2 = expandFromMiddle("sa", i, i+ 1);
+
+    }
   }
 
 
   static int expandFromMiddle(String s, int left, int right) {
-    if ( s==null || left > right ) return 0;
+    if (s == null || left > right) return 0;
     while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
-      left --;
-      right ++;
+      left--;
+      right++;
     }
-    return right - left + 1;
+    int x = right - left - 1;
+    return right - left - 1;
   }
 
   static void _13_test() {
