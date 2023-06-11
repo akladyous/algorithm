@@ -25,7 +25,7 @@ console.log(lengthOfLongestSubstring("pwwkew"));
 
     ⬇-> left = 0
     a b c a b c b b
-   ⬆ -> right = 0
+    ⬆ -> right = 0
    if charSet hasn't str[right] then: add str[right] to charSet.
     window = [a]
     max = 1
