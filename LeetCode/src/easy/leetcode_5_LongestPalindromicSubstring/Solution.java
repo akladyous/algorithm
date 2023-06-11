@@ -2,8 +2,8 @@ package easy.leetcode_5_LongestPalindromicSubstring;
 
 public class Solution {
     public static void main(String[] args) {
-        System.out.println(longestPalindrome("ac"));
         System.out.println(longestPalindrome("babad"));
+        System.out.println(longestPalindrome("ac"));
         System.out.println(longestPalindrome("bb"));
         System.out.println(longestPalindrome("cbbd"));
         System.out.println("-".repeat(60));
@@ -36,11 +36,21 @@ public class Solution {
 
         return s.substring(start, end + 1);
     }
+    private int[] extend(final String s, int i, int j) {
+        for (; i >= 0 && j < s.length(); --i, ++j)
+            if (s.charAt(i) != s.charAt(j))
+                break;
+        return new int[] {i + 1, j - 1};
+    }
     static int expandAroundCenter(String s, int left, int right) {
+        boolean leftGT = left >= 0;
+        boolean rightLT = right < s.length();
+        boolean eqChar = s.charAt(left) == s.charAt(right);
         while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
             left--;
             right++;
         }
+        int size = right - left - 1;
         return right - left - 1;
     }
 
