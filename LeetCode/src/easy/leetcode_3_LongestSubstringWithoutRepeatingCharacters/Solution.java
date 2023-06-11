@@ -14,7 +14,7 @@ public class Solution {
     }
     /*
         ↓                       window
-        P  W  W  K  E  W        L=0 R=0 [P] -> L++
+        P  W  W  K  E  W        L=0 R=0 P i not in SET ->[P] -> L++
         ↑  ↑                    L=0 R=0 [P, W] -> L++
         ↑     ↑
 
@@ -23,18 +23,18 @@ public class Solution {
     static int lengthOfLongestSubstring(String s) {
         int left = 0;
         int right = 0;
-        int max = 0;
-        Set<Character> window = new HashSet<>();
+        int maxLen = 0;
+        HashSet<Character> window = new HashSet<> ();
         while ( right < s.length() ) {
-            if ( !window.contains(s.charAt(right))) {
+            if (! window.contains(s.charAt(right))) {
                 window.add(s.charAt(right));
                 right ++;
-                max = Math.max(max,window.size());
+                maxLen = Math.max(maxLen, window.size());
             } else {
                 window.remove(s.charAt(left));
                 left ++;
             }
         }
-        return max;
+        return maxLen;
     }
 }

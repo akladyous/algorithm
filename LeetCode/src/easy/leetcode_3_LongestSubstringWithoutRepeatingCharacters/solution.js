@@ -43,7 +43,7 @@ console.log(lengthOfLongestSubstring("pwwkew"));
     max = 3
 
     ⬇-> left index = 0 -> str[left] = 'a'
-    a b c a b c b b
+    A B C A B C B B
          ⬆ -> right index = 3 and str[right] = 'a'
     [a,b,c] charSet
          if charSet has str[right] == 'a'
