@@ -5,18 +5,17 @@ import java.util.HashMap;
 
 public class Practice {
   public static void main(String[] args) {
-    expandAroundCenter("sa", 0, 0);
+    expandFromMiddle("sa", 0, 0);
   }
 
 
-  static int expandAroundCenter(String s, int left, int right) {
-    int size = 0;
+  static int expandFromMiddle(String s, int left, int right) {
+    if ( s==null || left > right ) return 0;
     while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
-      left--;
-      right++;
-      size = right - left + 1;
+      left --;
+      right ++;
     }
-    return size;
+    return right - left + 1;
   }
 
   static void _13_test() {
