@@ -14,7 +14,7 @@ public class Practice {
     while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
       left--;
       right++;
-      size = right - left - 1;
+      size = right - left + 1;
     }
     return size;
   }
