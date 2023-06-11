@@ -1,8 +1,7 @@
 function lengthOfLongestSubstring(s=new String){
-    let left = right = max = 0
-    // let left = 0;
-    // let right = 0;
-    // let max = 0;
+    let left = 0;
+    let right = 0;
+    let max = 0;
     let window = new Set();
     while(right < s.length){
         if(!window.has(s[right])){
