@@ -61,19 +61,6 @@ public class IsPalindrom {
     }
 
 
-    public static Boolean test2(String s) {
-        int left = s.length() /2, right = left;
-        if (s.length() %2 == 0) left--;
-        while (
-                left >= 0 &&
-                left <= right &&
-                right < s.length()
-        ) {
-            if ( s.charAt(left) != s.charAt(right) ) return false;
-            left --;
-            right ++;
-        }
-        return true;
-    }
+
 
 }

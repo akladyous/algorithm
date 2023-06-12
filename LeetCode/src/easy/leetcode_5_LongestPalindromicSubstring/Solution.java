@@ -55,12 +55,19 @@ public class Solution {
     // -------------------------------------------------------------------------------------
 
     static int expandAroundCenter2( String s, int fromIndex ) {
+        // 1 1 -> L=0 : left = 2/2 = 1 if left is even then subtract 1 so left = 0;
+        // 1 1 -> R=1 it's value is the first assigned to left pointer (1)
         // 1 2 3 4 3 2 1
         int left =  fromIndex / 2;
         int right = left;
         if (left % 2 == 0) left --;
-
-
+        while ( left >= 0 && right < fromIndex) {
+            if (s.charAt(left) != s.charAt(right)) {
+                left --;
+                right ++;
+            }
+        }
+        return right - left - 1;
     }
 
 
