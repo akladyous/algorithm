@@ -7,12 +7,6 @@ public class Solution {
         System.out.println(longestPalindrome("bb"));
         System.out.println(longestPalindrome("cbbd"));
         System.out.println("-".repeat(60));
-        System.out.println(longestPalindromeTest1("ac"));
-        System.out.println(longestPalindromeTest1("babad"));
-        System.out.println(longestPalindromeTest1("bb"));
-        System.out.println(longestPalindromeTest1("cbbd"));
-
-
     }
     //----------------------------------------------------------------
     static String longestPalindrome(String s) {
@@ -24,9 +18,10 @@ public class Solution {
         int end = 0;
 
         for (int i = 0; i < s.length(); i++) {
-            int len1 = expandAroundCenter(s, i, i); // Check for odd-length palindromes
-            int len2 = expandAroundCenter(s, i, i + 1); // Check for even-length palindromes
-            int len = Math.max(len1, len2);
+//            int len1 = expandAroundCenter(s, i, i); // Check for odd-length palindromes
+//            int len2 = expandAroundCenter(s, i, i + 1); // Check for even-length palindromes
+//            int len = Math.max(len1, len2);
+            int len = expandAroundCenter2(s, i);
 
             if (len > end - start) {
                 start = i - (len - 1) / 2;
@@ -59,16 +54,17 @@ public class Solution {
     }
     // -------------------------------------------------------------------------------------
 
-    static int expandFromCenter( String s, int fromIndex ) {
+    static int expandAroundCenter2( String s, int fromIndex ) {
         // 1 2 3 4 3 2 1
-        int left = 0 ;
-        int right = s.length() - fromIndex;
+        int left =  fromIndex / 2;
+        int right = left;
+        if (left % 2 == 0) left --;
 
-        return 1;
+
     }
 
 
-}
+
 
 
 }
