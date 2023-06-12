@@ -1,6 +1,7 @@
 public class IsPalindrom {
     public static void main(String[] args) {
         System.out.println(solution1("abcba"));
+        System.out.println(test1("abcba"));
         System.out.println(solution1("abcde"));
         System.out.println(solution1("123454321"));
         System.out.println("-".repeat(50));
@@ -27,7 +28,9 @@ public class IsPalindrom {
     1 2 3 4 3 2 1   CASE 2 -> EVEN
     */
     public static boolean solution2(String s) {
-        // 5/2 = 2 -
+        if (s.isEmpty()) return false;
+        if (s.length() == 1) return true;
+
         int left = s.length() / 2;
         int right = left;
         if ( s.length() % 2 == 0 ) left --;
@@ -42,8 +45,9 @@ public class IsPalindrom {
     }
 
     public static Boolean test1(String s) {
-        int left = s.length() /2, right = left;
-        if (s.length() %2 == 0) left--;
+        int left = s.length() / 2;
+        int right = left;
+        if ( s.length() % 2 == 0 ) left --;
         String palindrome = "";
         while (
                 left >= 0 &&
@@ -59,8 +63,5 @@ public class IsPalindrom {
         }
         return palindrome == s;
     }
-
-
-
-
 }
+

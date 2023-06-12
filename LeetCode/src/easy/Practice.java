@@ -5,24 +5,11 @@ import java.util.HashMap;
 
 public class Practice {
   public static void main(String[] args) {
-    String s1 = "racecar";
-    for (int i = 0; i < s1.length(); i++) {
-      int len1 = expandFromMiddle("sa", i, i);
-      int len2 = expandFromMiddle("sa", i, i+ 1);
 
-    }
   }
 
 
-  static int expandFromMiddle(String s, int left, int right) {
-    if (s == null || left > right) return 0;
-    while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
-      left--;
-      right++;
-    }
-    int x = right - left - 1;
-    return right - left - 1;
-  }
+
 
   static void _13_test() {
     System.out.println(_13("XXIV")); //24
