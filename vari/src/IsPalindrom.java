@@ -26,7 +26,7 @@ public class IsPalindrom {
     1 2 3 2 1       CASE 1 -> ODD
     1 2 3 4 3 2 1   CASE 2 -> EVEN
     */
-    public static boolean expandFromMiddle(String s) {
+    public static boolean solution2(String s) {
         // 5/2 = 2 -
         int left = s.length() / 2;
         int right = left;
@@ -41,7 +41,7 @@ public class IsPalindrom {
         return true;
     }
 
-    public static Boolean solution2(String s) {
+    public static Boolean test1(String s) {
         int left = s.length() /2, right = left;
         if (s.length() %2 == 0) left--;
         String palindrome = "";
@@ -61,7 +61,7 @@ public class IsPalindrom {
     }
 
 
-    public static Boolean solution3(String s) {
+    public static Boolean test2(String s) {
         int left = s.length() /2, right = left;
         if (s.length() %2 == 0) left--;
         while (
