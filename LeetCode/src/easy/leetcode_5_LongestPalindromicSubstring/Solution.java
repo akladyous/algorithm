@@ -59,19 +59,13 @@ public class Solution {
     }
     // -------------------------------------------------------------------------------------
 
-    static Boolean isPalindromeII( String s ) {
-        int left = 0;
-        int right = s.length() - 1;
-        while (left < right ) {
+    static int expandFromCenter( String s, int fromIndex ) {
 
-        }
-
+        return 1;
     }
 
 
-
-
-
+}
 
 
 }
