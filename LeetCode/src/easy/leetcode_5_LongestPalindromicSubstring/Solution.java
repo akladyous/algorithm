@@ -57,7 +57,7 @@ public class Solution {
         int size = right - left - 1;
         return right - left - 1;
     }
-
+    // -------------------------------------------------------------------------------------
 
     static Boolean isPalindromeII( String s ) {
         int left = 0;
