@@ -22,6 +22,25 @@ public class IsPalindrom {
         return true;
     };
 
+    /*
+    1 2 3 2 1       CASE 1 -> ODD
+    1 2 3 4 3 2 1   CASE 2 -> EVEN
+    */
+    public static boolean expandFromMiddle(String s) {
+        // 5/2 = 2 -
+        int left = s.length() / 2;
+        int right = left;
+        if ( s.length() % 2 == 0 ) left --;
+        while ( left >= 0 && right < s.length() ) {
+            if (s.charAt(left) != s.charAt(right)) {
+                return false;
+            }
+            left --;
+            right ++;
+        }
+        return true;
+    }
+
     public static Boolean solution2(String s) {
         int left = s.length() /2, right = left;
         if (s.length() %2 == 0) left--;
