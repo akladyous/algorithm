@@ -73,26 +73,6 @@ public class Solution {
         return right - left - 1;
     }
 
-    static String longestPalindromeTest1(String s) {
-        if (s == null || s.length() < 2) {
-            return s;
-        }
 
-        int left = s.length() / 2;
-        int right = left;
-        if (s.length() % 2 == 0) {
-            left--;
-        }
-
-        String palindrome = "";
-
-        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
-            palindrome = s.substring(left, right + 1);
-            left--;
-            right++;
-        }
-
-        return palindrome;
-    }
 
 }
