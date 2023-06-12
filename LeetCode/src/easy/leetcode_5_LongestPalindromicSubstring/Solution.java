@@ -36,6 +36,41 @@ public class Solution {
 
         return s.substring(start, end + 1);
     }
+    /*
+    condition  =
+        L>= 0
+        r < s.length()
+        charAt(left) equal charAt(right)
+    L
+    C B B D
+    R
+    */
+
+    static Boolean isPalindrome(String s) {
+        int left = 0;
+        int right = s.length() - 1;
+        while ( left < right ) {
+            if ( s.charAt(left) != s.charAt(right)) {
+                return false;
+            }
+            left ++;
+            right --;
+        }
+        return true;
+    }
+
+    static Boolean isPalindromeII( String s ) {
+        int left = 0;
+        int right = s.length() - 1;
+        while (left < right ) {
+
+        }
+
+    }
+
+    static int palindromeIndices(final String s,  int i) {
+
+    }
 
     static int expandAroundCenter(String s, int left, int right) {
         boolean leftGT = left >= 0;
