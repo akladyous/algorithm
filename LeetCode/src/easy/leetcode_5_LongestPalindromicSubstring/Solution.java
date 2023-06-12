@@ -60,6 +60,9 @@ public class Solution {
     // -------------------------------------------------------------------------------------
 
     static int expandFromCenter( String s, int fromIndex ) {
+        // 1 2 3 4 3 2 1
+        int left = 0 ;
+        int right = s.length() - fromIndex;
 
         return 1;
     }
