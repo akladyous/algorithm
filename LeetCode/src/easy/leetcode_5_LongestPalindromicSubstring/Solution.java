@@ -46,6 +46,17 @@ public class Solution {
     R
     */
 
+    static int expandAroundCenter(String s, int left, int right) {
+        boolean leftGT = left >= 0;
+        boolean rightLT = right < s.length();
+        boolean eqChar = s.charAt(left) == s.charAt(right);
+        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
+            left--;
+            right++;
+        }
+        int size = right - left - 1;
+        return right - left - 1;
+    }
 
 
     static Boolean isPalindromeII( String s ) {
@@ -61,17 +72,7 @@ public class Solution {
 
     }
 
-    static int expandAroundCenter(String s, int left, int right) {
-        boolean leftGT = left >= 0;
-        boolean rightLT = right < s.length();
-        boolean eqChar = s.charAt(left) == s.charAt(right);
-        while (left >= 0 && right < s.length() && s.charAt(left) == s.charAt(right)) {
-            left--;
-            right++;
-        }
-        int size = right - left - 1;
-        return right - left - 1;
-    }
+
 
 
 
