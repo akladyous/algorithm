@@ -4,6 +4,9 @@ public class Solution {
     public static void main(String[] args) {
         System.out.println(isPalindrome(121));
         System.out.println(isPalindrome(1410110141));
+        System.out.println(isPalindrome_2(121));
+        System.out.println(isPalindrome_2(1410110141));
+
     }
 
     public static boolean isPalindrome(int x) {
@@ -19,18 +22,8 @@ public class Solution {
         }
         return true;
     }
-}
 
-
-//----------------------------------------------------------------------
-class PalindromeNumber_solution_2 {
-    public static void main(String[] args) {
-        System.out.println(isPalindrome(121));
-        System.out.println(isPalindrome(1410110141));
-    }
-
-    public static boolean isPalindrome(int x) {
-
+    public static boolean isPalindrome_2(int x) {
         int reversedNumber = 0;
         int originalNumber = x;
 
@@ -39,11 +32,15 @@ class PalindromeNumber_solution_2 {
             reversedNumber = reversedNumber * 10 + digit;
             x /= 10;
         }
-
         return originalNumber == reversedNumber;
     }
 
-    /*
+    public static int getHighestPowerOf10(int x) {
+        return (int) Math.pow(10, (int) Math.floor(Math.log10(x)));
+    }
+}
+
+/*
     Initialization:
 
     Initially, the reversedNumber is set to 0.
@@ -67,8 +64,6 @@ class PalindromeNumber_solution_2 {
     reversedNumber = reversedNumber * 10 + 1 becomes 321.
     After these iterations, reversedNumber will contain the reversed form of the original number.
 
-     */
-    public static int getHighestPowerOf10(int x) {
-        return (int) Math.pow(10, (int) Math.floor(Math.log10(x)));
-    }
-}
+*/
+
+//----------------------------------------------------------------------
