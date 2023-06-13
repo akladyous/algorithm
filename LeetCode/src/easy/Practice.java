@@ -9,6 +9,10 @@ public class Practice {
     System.out.println(isPalindrome_1(121));
     System.out.println(isPalindrome_1(1221));
     System.out.println(isPalindrome_1(1234));
+    System.out.println("-".repeat(60));
+    System.out.println(isPalindrome_2(121));
+    System.out.println(isPalindrome_2(1221));
+    System.out.println(isPalindrome_2(1234));
   }
 
   static boolean isPalindrome_1(int x) {
@@ -22,15 +26,20 @@ public class Practice {
     return originalNumber == reversedNumber;
   }
 
-
   static boolean isPalindrome_2(int x) {
-    String number = Integer.toString(x);
+    char[] nums = Integer.toString(x).toCharArray();
     int left = 0;
-    int right = number.length() - 1;
+    int right = nums.length - 1;
     while ( left < right ) {
-
+      if ( nums[left] != nums[right] ) {
+        return false;
+      }
+      left ++;
+      right --;
     }
+    return true;
   }
+
 
 }
 
