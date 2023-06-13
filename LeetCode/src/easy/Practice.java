@@ -1,38 +1,40 @@
 package easy;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Practice {
   public static void main(String[] args) {
-    String[] strs1 = {"flower", "flow", "flight"};
-    String longestPrefix1 = longestCommonPrefix(strs1);
-    System.out.println("( " + longestPrefix1 + " )");
+    String s1 = "()";
+    String s2 = "()[]{}";
+    String s3 = "(]";
+    String s4 = "{[]}";
 
-    String[] strs2 = {"dog", "racecar", "car"};
-    String longestPrefix2 = longestCommonPrefix(strs2);
-    System.out.println("( " + longestPrefix2 + " )");
+    System.out.println(isValidParentheses(s1)); // true
+    System.out.println(isValidParentheses(s2)); // true
+    System.out.println(isValidParentheses(s3)); // false
+    System.out.println(isValidParentheses(s4)); // true
 
 
   }
 
-  public static String longestCommonPrefix(String[] strs) {
-    String prefix = strs[0];
-
-    for (int i=1; i<strs.length; i++) {
-      while ( !strs[i].startsWith(prefix) ) {
-        prefix = prefix.substring(0, prefix.length() - 1);
-        if (prefix.isEmpty()) {
-          return "";
-        };
+  public static boolean isValidParentheses(String s) {
+    Stack<Character> stack = new Stack<>();
+    for (Character c: s.toCharArray()) {
+      if (c == '(') {
+        stack.push(')');
+      } else if ( c == '[') {
+        stack.push(']');
+      } else if ( c == '{') {
+        stack.push('}');
+      } else if (stack.isEmpty() || stack.pop() != c) {
+        return false;
       }
     }
-    return prefix;
   }
 
 
+}
 
-  }
+//800 225 8930 infinity
+// 818 875 6020 -> 885049
 
