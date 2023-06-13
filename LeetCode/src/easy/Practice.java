@@ -2,14 +2,11 @@ package easy;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 
 public class Practice {
   public static void main(String[] args) {
-    String s1 = "please refer to the document";
-    String s2 = "good morning madam, How can I assist you today?";
-
-    int i = 0;
-
+    _1_test();
   }
 
 
@@ -61,9 +58,16 @@ public class Practice {
 
     return null;
   }
-
-
-
+  static int[] _1_brute_force(int[] nums, int target) {
+    for (int left=0; left<nums.length; left++) {
+      for (int right=left+1; right<nums.length; right ++) {
+        if (nums[left] + nums[right] == target) {
+          return new int[] {left, right};
+        }
+      }
+    }
+    return null;
+  }
 
 }
 

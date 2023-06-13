@@ -31,6 +31,16 @@ public class TwoSum_1 {
         return null;
 
     }
+    public static int[] bruteForce(int[] nums, int target) {
+        for (int left=0; left < nums.length; left ++) {
+            for (int right=left + 1; right < nums.length; right ++) {
+                if (nums[left] + nums[right] == target) {
+                    return new int[]{left, right};
+                }
+            }
+        }
+        return null;
+    }
 }
 
 // {2:0}
