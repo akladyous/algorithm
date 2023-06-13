@@ -6,40 +6,26 @@ import java.util.Map;
 
 public class Practice {
   public static void main(String[] args) {
-    System.out.println(isPalindrome_1(121));
-    System.out.println(isPalindrome_1(1221));
-    System.out.println(isPalindrome_1(1234));
-    System.out.println("-".repeat(60));
-    System.out.println(isPalindrome_2(121));
-    System.out.println(isPalindrome_2(1221));
-    System.out.println(isPalindrome_2(1234));
+    String[] strs1 = {"flower", "flow", "flight"};
+    String longestPrefix1 = longestCommonPrefix(strs1);
+    System.out.println("( " + longestPrefix1 + " )");
+
+    String[] strs2 = {"dog", "racecar", "car"};
+    String longestPrefix2 = longestCommonPrefix(strs2);
+    System.out.println("( " + longestPrefix2 + " )");
   }
 
-  static boolean isPalindrome_1(int x) {
-    int reversedNumber = 0;
-    int originalNumber = x;
-    while ( x > 0 ) {
-      int leastSignificantDigit = x % 10;
-      reversedNumber = reversedNumber * 10 + leastSignificantDigit;
-      x /= 10;
+
+  public static String longestCommonPrefix(String[] strs) {
+    String prefix = strs[0];
+
+    for (int i=1; i<strs.length; i++) {
+
     }
-    return originalNumber == reversedNumber;
-  }
 
-  static boolean isPalindrome_2(int x) {
-    char[] nums = Integer.toString(x).toCharArray();
-    int left = 0;
-    int right = nums.length - 1;
-    while ( left < right ) {
-      if ( nums[left] != nums[right] ) {
-        return false;
-      }
-      left ++;
-      right --;
-    }
-    return true;
   }
 
 
-}
+
+  }
 
