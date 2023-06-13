@@ -11,11 +11,6 @@ public class Practice {
 
 
 
-  static void _13_test() {
-    System.out.println(_13("XXIV")); //24
-    System.out.println(_13("MCMXCIV")); //1994
-    System.out.println(_13("LVIII")); //58
-  }
 
   static int _13(String s) {
     int currentValue = 0;
