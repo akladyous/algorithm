@@ -13,46 +13,6 @@ public class Practice {
   }
 
 
-static int palindromeBoundaries(String s, int index) {
-  /*
-    1) (palindrome length - 1)
-       helps us determine how many characters we need to move from
-       the center towards the left to find the starting index of the palindrome.
-
-    2) (palindrome length - 1) / 2
-       calculates the number of characters to move left
-       from the center to reach the start index of the palindrome.
-
-    3) subtract the current index `i` from step 2 `( len - 1) / 2`
-       to find the start index of the longest palindrome substring.
-
-    Example - [ EDGE CASE 1  `ODD LENGTH` ]
-    good morning madam, How can i assist you today?
-                   ↑ i = 15
-                   palindrome size 5
-                   1) (palindrome length - 1)
-                      5 - 1 = `4`
-                   2) (palindrome length - 1) / 2
-                      (5 - 1) / 2 = `2` -> is the number of characters to move left
-                   3) subtract the current index `i` from step 2 `( len-1) / 2`
-                      index = 15
-                      index - 2 `resulting in step 2`
-                      move 2 characters to find the start index of the longest palindrome substring.
-
-    Example - [ EDGE CASE 1  `EVEN LENGTH` ]
-    sunny day, peep of joy.
-                ↑ i = 12
-                   palindrome size 4
-                   1) (palindrome length - 1)
-                      4 - 1 = `3`
-                   2) (palindrome length - 1) / 2
-                      (4 - 1) / 2 = `1` -> is the number of characters to move left
-                   3) subtract the current index `i` from step 2 `( len-1) / 2`
-                      index = 12
-                      index - 1 `resulting in step 2`
-                      move 1 character to find the start index of the longest palindrome substring.
-  */
-}
 
   static void _13_test() {
     System.out.println(_13("XXIV")); //24
