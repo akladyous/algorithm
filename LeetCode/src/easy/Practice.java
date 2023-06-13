@@ -14,6 +14,8 @@ public class Practice {
     String[] strs2 = {"dog", "racecar", "car"};
     String longestPrefix2 = longestCommonPrefix(strs2);
     System.out.println("( " + longestPrefix2 + " )");
+
+
   }
 
   public static String longestCommonPrefix(String[] strs) {
