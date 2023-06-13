@@ -46,16 +46,30 @@ public class Practice {
 
     result = _1(new int[]{2, 7, 11, 15}, 9);
     System.out.println(Arrays.toString(result));
+    result = _1_brute_force(new int[]{2, 7, 11, 15}, 9);
+    System.out.println(Arrays.toString(result));
 
     result = _1(new int[]{3, 1, 5, 6, 4, 3}, 6);
+    System.out.println(Arrays.toString(result));
+    result = _1_brute_force(new int[]{3, 1, 5, 6, 4, 3}, 6);
     System.out.println(Arrays.toString(result));
 
     result = _1(new int[]{3, 2, 4}, 6);
     System.out.println(Arrays.toString(result));
+    result = _1_brute_force(new int[]{3, 2, 4}, 6);
+    System.out.println(Arrays.toString(result));
   }
 
   static int[] _1(int[] nums, int target) {
-
+    HashMap<Integer, Integer> indices = new HashMap<>();
+    for (int i=0; i < nums.length; i++) {
+      int diff = target - nums[i];
+      if (indices.containsKey(diff)) {
+        return new int[] {indices.get(diff), i};
+      } else {
+        indices.put(nums[i], i);
+      }
+    }
     return null;
   }
   static int[] _1_brute_force(int[] nums, int target) {
