@@ -5,8 +5,7 @@ import java.util.HashMap;
 public class Solution {
   public static void main(String[] args) {
     System.out.println(isIsomorphic("bbbaaaba", "aaabbbba"));
-    System.out.println(isIsomorphic1("egg", "acc"));
-    HashMap<Integer, Integer> nums = new HashMap<>();
+    System.out.println(isIsomorphic("egg", "acc"));
 
   }
 
@@ -18,10 +17,20 @@ public class Solution {
       char charS = s.charAt(i);
       char charT = t.charAt(i);
 
+    /*
+      Check the mappings in the arrays:
+      - If mapS[charS] is non-zero (indicating a mapping exists) and mapS[charS] is not equal to charT, or
+      - If mapT[charT] is non-zero (indicating a mapping exists) and mapT[charT] is not equal to charS,
+        then the characters charS and charT are not isomorphic. Return false.
+    */
       if (mapS[charS] != 0 && mapS[charS] != charT || mapT[charT] != 0 && mapT[charT] != charS) {
         return false;
       }
-
+      /*
+      Update the mappings in the arrays:
+        - Set mapS[charS] to charT to indicate that charS is mapped to charT.
+        - Set mapT[charT] to charS to indicate that charT is mapped to charS.
+      */
       mapS[charS] = charT;
       mapT[charT] = charS;
     }
