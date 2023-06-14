@@ -4,37 +4,28 @@ import java.util.*;
 
 public class Practice {
   public static void main(String[] args) {
-    String s1 = "()";
-    String s2 = "()[]{}";
-    String s3 = "(]";
-    String s4 = "{[]}";
+    int[] nums1 = {1, 1, 2};
+    int k1 = removeDuplicatesFromSortedArray_26(nums1);
+    System.out.println(k1); // Output: 2
 
-    System.out.println(isValidParentheses(s1)); // true
-    System.out.println(isValidParentheses(s2)); // true
-    System.out.println(isValidParentheses(s3)); // false
-    System.out.println(isValidParentheses(s4)); // true
+    int[] nums2 = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+    int k2 = removeDuplicatesFromSortedArray_26(nums2);
+    System.out.println(k2); // Output: 5
+
+    int[] nums3 = {1, 2, 3, 3, 4, 4, 5};
+    int k3 = removeDuplicatesFromSortedArray_26(nums3);
+    System.out.println(k3); // Output: 5
 
 
   }
 
-  public static boolean isValidParentheses(String s) {
-    Stack<Character> stack = new Stack<>();
-    for (Character c: s.toCharArray()) {
-      if (c == '(') {
-        stack.push(')');
-      } else if ( c == '[') {
-        stack.push(']');
-      } else if ( c == '{') {
-        stack.push('}');
-      } else if (stack.isEmpty() || stack.pop() != c) {
-        return false;
-      }
+  public static int removeDuplicatesFromSortedArray_26(int[] nums) {
+    int left = 0;
+    for (int right=0; right < nums.length; right ++) {
+
     }
-  }
+
+  };
 
 
 }
-
-//800 225 8930 infinity
-// 818 875 6020 -> 885049
-
