@@ -4,10 +4,11 @@ import java.util.Map;
 public class Test {
 
     public static void main(String[] args) {
-        System.out.println(solution("ciao paolo"));
+        System.out.println(solution1("ciao paolo"));
+        System.out.println(solution2("ciao paolo"));
     }
 
-    public static char solution(String input) {
+    public static char solution1(String input) {
         Map<Character, Integer> charsCount = new HashMap<>();
         for (char c : input.toCharArray()) {
             charsCount.put(c, charsCount.getOrDefault(c, 0) + 1);

@@ -42,18 +42,33 @@ public class Solution {
       char charS = s.charAt(i);
       char charT = t.charAt(i);
 
-      if (mapS[charS] != 0 && mapS[charS] != charT || mapT[charT] != 0 && mapT[charT] != charS) {
+      if ( mapS[charS] != 0 &&  mapS[charS] != charT || mapT[charT] != 0 && mapT[charT] != charS) {
         return false;
       }
 
       mapS[charS] = charT;
       mapT[charT] = charS;
     }
-
     return true;
   }
 
-  static boolean isIsomorphic1(String s, String t) {
+  static  boolean solutionII(String s, String t) {
+    int[] sCounts = new int[128];
+    int[] tCounts = new int[128];
+
+    for(int i = 0; i < s.length(); i++){
+
+      if(sCounts[(int) (s.charAt(i) - 97) ] != tCounts[ (int) (t.charAt(i) - 97) ]) {
+        return false;
+      }
+      sCounts[ (int) (s.charAt(i) - 97) ] = i + 1;
+      tCounts[ (int) (t.charAt(i) - 97) ] = i + 1;
+    }
+    return true;
+  }
+
+
+  static boolean solutionIII(String s, String t) {
     HashMap<Character, Character> mapS = new HashMap<>();
     HashMap<Character, Character> mapT = new HashMap<>();
 
@@ -66,23 +81,6 @@ public class Solution {
       }
       mapS.put(charS, charT);
       mapT.put(charT, charS);
-    }
-    return true;
-  }
-
-
-
-  static  boolean isIsomorphic3(String s, String t) {
-    int[] sCounts = new int[128];
-    int[] tCounts = new int[128];
-
-    for(int i = 0; i < s.length(); i++){
-
-      if(sCounts[(int) (s.charAt(i) - 97) ] != tCounts[ (int) (t.charAt(i) - 97) ]) {
-        return false;
-      }
-      sCounts[ (int) (s.charAt(i) - 97) ] = i + 1;
-      tCounts[ (int) (t.charAt(i) - 97) ] = i + 1;
     }
     return true;
   }
