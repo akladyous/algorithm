@@ -10,6 +10,31 @@ public class Solution {
   }
 
   static boolean isIsomorphic(String s, String t) {
+    /*
+    The idea of the solution is to check if the characters in string s can be replaced to obtain string t,
+    while preserving the order of characters and ensuring that no two characters map to the same character.
+
+    The solution uses two arrays, mapS and mapT, to store the mappings between characters in s and t.
+    Each index in the arrays represents an ASCII character, and the value at each index represents the mapped character.
+
+    The algorithm iterates over the characters of s and t simultaneously. For each character at index i, it performs the following steps:
+
+    1- Retrieve the characters charS and charT at index i from s and t, respectively.
+       Check if there is a mapping for charS in mapS and if it matches charT. Similarly,
+    2-check if there is a mapping for charT in mapT and if it matches charS.
+    3- If the mappings are not consistent (either charS maps to a different character than charT
+       or charT maps to a different character than charS),
+       it means that the strings are not isomorphic. Return false.
+    4- If the mappings are consistent, update the mappings in mapS and mapT by setting charS
+       to map to charT and charT to map to charS.
+    5- Repeat the above steps for each character in the strings.
+
+    If the algorithm completes the iteration without finding any inconsistent mappings,
+    it means that the strings are isomorphic. Return true.
+
+    The solution is efficient as it requires a single pass through the strings and uses fixed-size arrays for character
+    mappings, resulting in a time complexity of O(n), where n is the length of the strings.
+    */
     int[] mapS = new int[128];
     int[] mapT = new int[128];
 
@@ -17,20 +42,10 @@ public class Solution {
       char charS = s.charAt(i);
       char charT = t.charAt(i);
 
-    /*
-      Check the mappings in the arrays:
-      - If mapS[charS] is non-zero (indicating a mapping exists) and mapS[charS] is not equal to charT, or
-      - If mapT[charT] is non-zero (indicating a mapping exists) and mapT[charT] is not equal to charS,
-        then the characters charS and charT are not isomorphic. Return false.
-    */
       if (mapS[charS] != 0 && mapS[charS] != charT || mapT[charT] != 0 && mapT[charT] != charS) {
         return false;
       }
-      /*
-      Update the mappings in the arrays:
-        - Set mapS[charS] to charT to indicate that charS is mapped to charT.
-        - Set mapT[charT] to charS to indicate that charT is mapped to charS.
-      */
+
       mapS[charS] = charT;
       mapT[charT] = charS;
     }
