@@ -27,18 +27,22 @@ public class Practice {
       int[] tCounts = new int[128];
 
       for(int i = 0; i < s.length(); i++){
+        char sChar = s.charAt(i);
+        char tChar = t.charAt(i);
+
+        int sCount = sCounts[s.charAt(i)];
+        int tCount = tCounts[t.charAt(i)];
 
         if(sCounts[s.charAt(i)] != tCounts[t.charAt(i)])
           return false;
         // [_1] [_2] [_3] [43] [53] [63] [67]
         // [1_] [2_] [3_] [34] [35] [36] [
-        char sChar = s.charAt(i);
-        char tChar = t.charAt(i);
         sCounts[s.charAt(i)] = i + 1;
         tCounts[t.charAt(i)] = i + 1;
 
-        int sCount = sCounts[s.charAt(i)];
-        int tCount = tCounts[t.charAt(i)];
+
+        sCount = sCounts[s.charAt(i)];
+        tCount = tCounts[t.charAt(i)];
         System.out.println("-");
       }
       return true;
