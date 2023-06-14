@@ -34,13 +34,27 @@ public class Practice {
     = (7 ^ 1) ^ 2
     = 6 ^ 2
     = 4
+
+    it means, When we XOR two identical numbers,
+    the result is 0. So, by XORing all the numbers in the array,
+    the duplicate numbers cancel each other out, resulting in 0. Finally,
+    when we XOR 0 with the single non-repeated number, we get the non-repeated number itself.
+
+    sample example again: [4, 1, 1, 2, 2]:
+
+    XORing 1 with 1 gives us 0: 1 ^ 1 = 0
+    XORing 0 with 2 gives us 2: 0 ^ 2 = 2
+    XORing 2 with 2 gives us 0: 2 ^ 2 = 0
+    XORing 0 with 4 gives us 4: 0 ^ 4 = 4
+
+    the duplicate numbers 1 and 2 cancel each other out, resulting in 0.
+    Finally, XORing 0 with 4 gives us the non-repeated number 4 as the result.
     */
-    int match = 0;
-    for (int num: nums) {
-      match ^= num;
-      System.out.println(Integer.toBinaryString(num));
+    int uniqueNum = 0;
+    for(int num: nums) {
+      uniqueNum ^= num;
     }
-    return match;
+    return uniqueNum;
   }
   static int bruteForce(int[] nums) {
     int[] counts = new int[10];
