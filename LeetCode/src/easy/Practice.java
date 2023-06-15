@@ -17,19 +17,16 @@ public class Practice {
   }
 
   static int lengthOfLastWord(String s) {
-    int max = 0;
-    int wordMax = 0;
-    for (int i=s.length(); i< s.length(); i++) {
-        if (s.charAt(i) == ' ') {
-          wordMax = 0;
-        } else {
-          wordMax ++;
+    int length = 0;
+    for (int i=s.length() - 1; i >= 0; i--) {
+        if (s.charAt(i) != ' ') {
+            length++;
         }
-        if (wordMax > max) {
-            max = wordMax;
+        else if (length > 0) {
+            break;
         }
     }
-    return max;
+    return length;
   }
 
 
