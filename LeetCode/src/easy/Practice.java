@@ -4,18 +4,26 @@ import java.util.*;
 
 public class Practice {
   public static void main(String[] args) {
-    System.out.println(containsDuplicate(new int[] {1,2,3,1}));
+    String s1 = "anagram";
+    String t1 = "nagaram";
+    System.out.println(isAnagram(s1, t1)); // true
+
+    String s2 = "rat";
+    String t2 = "car";
+    System.out.println(isAnagram(s2, t2)); // false
   }
 
-  static boolean containsDuplicate(int[] nums) {
-    HashSet<Integer> counts = new HashSet<>();
-    for (int num: nums) {
-      if (counts.contains(num)) {
-        return true;
-      }
-      counts.add(num);
+  static boolean isAnagram(String s, String t) {
+    int[] charCounts = new int[26];
+    int result = 0;
+    for (int i=0; i< s.length(); i++) {
+      charCounts[s.charAt(i) - 97] ++;
+      charCounts[t.charAt(i) - 97] --;
+      result ^= (int) s.charAt(i);
+      result ^= t.charAt(i);
     }
-    return false;
+    return result == 0;
   }
-}
+
+  }
 
