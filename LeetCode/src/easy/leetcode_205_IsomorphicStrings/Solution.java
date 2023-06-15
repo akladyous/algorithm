@@ -4,12 +4,12 @@ import java.util.HashMap;
 
 public class Solution {
   public static void main(String[] args) {
-    System.out.println(isIsomorphic("bbbaaaba", "aaabbbba"));
+    System.out.println(isIsomorphic("aba", "bab"));
+    System.out.println(isIsomorphic("paper", "title"));
     System.out.println(isIsomorphic("egg", "acc"));
-
+    System.out.println(isIsomorphic("bbbaaaba", "aaabbbba"));
   }
 
-  static boolean isIsomorphic(String s, String t) {
     /*
     The idea of the solution is to check if the characters in string s can be replaced to obtain string t,
     while preserving the order of characters and ensuring that no two characters map to the same character.
@@ -35,6 +35,29 @@ public class Solution {
     The solution is efficient as it requires a single pass through the strings and uses fixed-size arrays for character
     mappings, resulting in a time complexity of O(n), where n is the length of the strings.
     */
+
+  /*
+  if ( mapS[charS] != 0 &&  mapS[charS] != charT || mapT[charT] != 0 && mapT[charT] != charS) {
+        return false;
+  }
+  */
+
+  static  boolean isIsomorphic(String s, String t) {
+    int[] mapS = new int[128];
+    int[] mapT = new int[128];
+
+    for(int i = 0; i < s.length(); i++){
+      if(mapS[s.charAt(i)] != mapT[t.charAt(i)]) {
+        return false;
+      }
+      mapS[ s.charAt(i) ] = i + 1;
+      mapT[ t.charAt(i) ] = i + 1;
+    }
+    return true;
+  }
+
+
+  static boolean solutionII(String s, String t) {
     int[] mapS = new int[128];
     int[] mapT = new int[128];
 
@@ -42,30 +65,15 @@ public class Solution {
       char charS = s.charAt(i);
       char charT = t.charAt(i);
 
-      if ( mapS[charS] != 0 &&  mapS[charS] != charT || mapT[charT] != 0 && mapT[charT] != charS) {
+      if ( mapS[charS] != 0 && mapS[charS] != charT || mapT[charT] != 0 && mapT[charT] != charS ) {
         return false;
       }
-
       mapS[charS] = charT;
       mapT[charT] = charS;
     }
     return true;
   }
 
-  static  boolean solutionII(String s, String t) {
-    int[] sCounts = new int[128];
-    int[] tCounts = new int[128];
-
-    for(int i = 0; i < s.length(); i++){
-
-      if(sCounts[(int) (s.charAt(i) - 97) ] != tCounts[ (int) (t.charAt(i) - 97) ]) {
-        return false;
-      }
-      sCounts[ (int) (s.charAt(i) - 97) ] = i + 1;
-      tCounts[ (int) (t.charAt(i) - 97) ] = i + 1;
-    }
-    return true;
-  }
 
 
   static boolean solutionIII(String s, String t) {
