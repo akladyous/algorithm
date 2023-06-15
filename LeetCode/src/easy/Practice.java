@@ -19,7 +19,7 @@ public class Practice {
   static int lengthOfLastWord(String s) {
     int max = 0;
     int wordMax = 0;
-    for (int i=0; i< s.length(); i++) {
+    for (int i=s.length(); i< s.length(); i++) {
         if (s.charAt(i) == ' ') {
           wordMax = 0;
         } else {
@@ -32,18 +32,6 @@ public class Practice {
     return max;
   }
 
-    static int lengthOfLastWord2(String s) {
-        int length = 0; // Variable to track the length of the last word
 
-        for (int i = s.length() - 1; i >= 0; i--) {
-            if (s.charAt(i) != ' ') {
-                length++; // Increment length if a non-space character is encountered
-            } else if (length > 0) {
-                // Break the loop if a space is encountered after the last word
-                break;
-            }
-        }
-        return length;
-    }
 }
 
