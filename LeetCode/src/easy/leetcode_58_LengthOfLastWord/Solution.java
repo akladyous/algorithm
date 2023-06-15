@@ -10,7 +10,6 @@ public class Solution {
         System.out.println(lengthOfLastWord(s1));
         s1 = "Today is a nice day";
         System.out.println(lengthOfLastWord(s1));
-
     }
 
     static int lengthOfLastWord(String s) {
