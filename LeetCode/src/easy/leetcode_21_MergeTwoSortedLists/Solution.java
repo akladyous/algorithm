@@ -1,4 +1,4 @@
-package easy;
+package easy.leetcode_21_MergeTwoSortedLists;
 
 class ListNode {
     int val;
