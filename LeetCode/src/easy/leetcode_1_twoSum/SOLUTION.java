@@ -3,7 +3,7 @@ package easy.leetcode_1_twoSum;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class TwoSum_1 {
+public class Solution {
 
     public static void main(String[] args) {
         int[] result;
@@ -40,6 +40,26 @@ public class TwoSum_1 {
             }
         }
         return null;
+    }
+
+    //{2,7,11,15}, 9
+    // Given a sorted array of unique integers and a target integer
+    public static int[] twoPointers(int[] nums, int target) {
+        int left = 0;
+        int right = nums.length - 1;
+        while ( left < right ) {
+            int currentSum = nums[left] + nums[right];
+            if ( currentSum == target) {
+                return new int[] {left, right};
+            }
+
+            if ( currentSum > target) {
+                right --;
+            } else {
+                left ++;
+            }
+        }
+        return new int[]{-1, -1};
     }
 }
 

@@ -18,13 +18,27 @@ public class Practice {
         System.out.println(isSubsequence(s2, t2)); // Output: false
     }
 
-    static boolean isSubsequence(String s, String t) { // [s] -> is a subsequence of [t]
+    static boolean isSubsequence2(String s, String t) { // [s] -> is a subsequence of [t]
         int sPointer = 0;
         for (int tPointer=0; tPointer < t.length(); tPointer ++) {
             if (sPointer < s.length() && t.charAt(tPointer) == s.charAt(sPointer)) {
                 sPointer ++;
             }
         }
+        return sPointer == s.length();
+    }
+
+    static boolean isSubsequence(String s, String t) {
+        int sPointer = 0;
+        int tPointer = 0;
+
+        while ( sPointer < s.length() && tPointer < t.length() ) {
+            if ( s.charAt(sPointer) == t.charAt(tPointer) ) {
+                sPointer ++;
+            }
+            tPointer ++;
+        }
+
         return sPointer == s.length();
     }
 }
