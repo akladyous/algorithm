@@ -5,7 +5,6 @@ import java.util.*;
 public class Practice {
     public static void main(String[] args) {
         int[] inputs1 = new int[] {5,7,7,8,8,10};
-
         System.out.println(Arrays.toString(searchRange(inputs1, 8)));
     }
 
