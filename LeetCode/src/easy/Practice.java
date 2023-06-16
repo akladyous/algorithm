@@ -9,11 +9,13 @@ public class Practice {
     }
 
     static void call_rotate() {
-
+        int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int k = 2;
+        rotate(nums, k);
+        System.out.println("Rotated Array: " + Arrays.toString(nums));
     }
 
     static void rotate(int[] nums, int k) {
-        // Input: nums = [1,2,3,4,5,6,7], k = 3
         // Input: nums = [1,2,3,4,5,6,7], k = 3
         // Output:       [5,6,7,1,2,3,4]
         int left  = 0;
@@ -23,6 +25,9 @@ public class Practice {
         [7, 6, 5, 4, 3, 2, 1]
         [5, 6, 7, 4, 3, 2, 1]
         [5, 6, 7, 1, 2, 3, 4]
+
+        [1, 2, 3, 4, 5, 6, 7]
+        [7, 2, 3, 4, 5, 6, 1]
         */
 
         for (int i=0; i<nums.length; i++) {
