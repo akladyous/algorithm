@@ -8,7 +8,7 @@ public class Solution {
 
     public static void main(String[] args) {
         System.out.println(
-                Arrays.toString(searchRange(new int[]{5,7,7,8,8,10}, 8))
+        Arrays.toString(searchRange(new int[]{5,7,7,8,8,10}, 8))
         );
     }
 
@@ -27,18 +27,30 @@ public class Solution {
         while ( left <= right ) {
             int mid = left + (right - left ) / 2;
 
-            if ( nums[mid] <= target ) {
-                right = mid - 1;
+            if ( nums[mid] == target ) index = mid;
+            if ( nums[mid] >= target ) {
+                right = mid -1 ;
+            } else {
+                left = mid + 1;
             }
         }
-
         return index;
     }
-    static int find_last_index_of_element_in_sorted_array(int[] nums, int target) {
+    static  int find_last_index_of_element_in_sorted_array(int[] nums, int target) {
         int index = -1;
+        int left = 0;
+        int right = nums.length - 1;
 
+        while ( left <= right ) {
+            int mid = left + (right - left ) / 2;
 
+            if ( nums[mid] == target ) index = mid;
+            if ( nums[mid] <= target ) {
+                left = mid + 1;
+            } else {
+                right = mid -1 ;
+            }
+        }
         return index;
     }
-
 }
