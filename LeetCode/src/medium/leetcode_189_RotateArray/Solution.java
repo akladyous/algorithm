@@ -27,7 +27,8 @@ public class Solution {
         for (int k : kValues) {
             int[] rotatedNums = Arrays.copyOf(nums, nums.length);
             rotate(rotatedNums, k);
-            System.out.println("Rotated Array (k = " + k + "): " + Arrays.toString(rotatedNums));
+            System.out.println("Rotated Array (k = " + k + "): " +
+                                Arrays.toString(rotatedNums));
         }
     }
 
