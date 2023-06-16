@@ -24,4 +24,6 @@ public class FirstTrueInSortedBooleanArray {
         }
         return boundaryIndex;
     }
+
+
 }
