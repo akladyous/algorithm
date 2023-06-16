@@ -6,25 +6,29 @@ public class Solution {
     public static void main(String[] args) {
         Solution solution = new Solution();
 
-        int[] nums1 = {1, 2, 3, 4, 5, 6, 7};
-        int k1 = 3;
-        solution.rotate(nums1, k1);
-        System.out.println("Rotated Array (Test Case 1): " + Arrays.toString(nums1));
+//        int[] nums1 = {1, 2, 3, 4, 5, 6, 7};
+//        int k1 = 3;
+//        solution.rotate(nums1, k1);
+//        System.out.println("Rotated Array (Test Case 1): " + Arrays.toString(nums1));
+//
+//        int[] nums2 = {-1, -100, 3, 99};
+//        int k2 = 2;
+//        solution.rotate(nums2, k2);
+//        System.out.println("Rotated Array (Test Case 2): " + Arrays.toString(nums2));
+//
+//        int[] nums3 = {5, 11, 20, 9, -3};
+//        int k3 = 4;
+//        solution.rotate(nums3, k3);
+//        System.out.println("Rotated Array (Test Case 3): " + Arrays.toString(nums3));
 
         int[] nums = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        int k = 2;
-        solution.rotate(nums, k);
-        System.out.println("Rotated Array: " + Arrays.toString(nums));
+        int[] kValues = {1, 2, 3, 4, 5};
 
-        int[] nums2 = {-1, -100, 3, 99};
-        int k2 = 2;
-        solution.rotate(nums2, k2);
-        System.out.println("Rotated Array (Test Case 2): " + Arrays.toString(nums2));
-
-        int[] nums3 = {5, 11, 20, 9, -3};
-        int k3 = 4;
-        solution.rotate(nums3, k3);
-        System.out.println("Rotated Array (Test Case 3): " + Arrays.toString(nums3));
+        for (int k : kValues) {
+            int[] rotatedNums = Arrays.copyOf(nums, nums.length);
+            rotate(rotatedNums, k);
+            System.out.println("Rotated Array (k = " + k + "): " + Arrays.toString(rotatedNums));
+        }
     }
 
     static void rotate(int[] nums, int k) {
