@@ -69,19 +69,24 @@ public class Solution {
 }
 
 class TwoSumTest {
-    @Test
-    void testTwoSum() {
-        Solution solution = new Solution();
+    Solution solution = new Solution();
+    int[] result = new int[2];
 
-        int[] result = new int[2];
+    @Test
+    void testTwoSumOne() {
         result = solution.twoSum(new int[]{2,7,11,15}, 9);
         System.out.println(Arrays.toString(result));
         assertArrayEquals( new int[]{0,1}, result);
-
+    }
+    @Test
+    void testTwoSumTwo() {
         result = solution.twoSum(new int[]{3,1,5,6,4,3}, 6);
         System.out.println(Arrays.toString(result));
         assertArrayEquals( new int[]{1,2}, result);
+    }
 
+    @Test
+    void testTwoSumThree() {
         result = solution.twoSum(new int[]{3,2,4}, 6);
         System.out.println(Arrays.toString(result));
         assertArrayEquals( new int[]{1,2}, result);
