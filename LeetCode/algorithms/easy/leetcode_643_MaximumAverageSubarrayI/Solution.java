@@ -12,20 +12,20 @@ public class Solution {
 
     static double findMaxAverage(int[] nums, int k) {
         double maxAverage = Double.NEGATIVE_INFINITY;
-        int sum = 0;
-
-        int left =0;
+        double currentSum = 0;
+        int left = 0;
         int right = 0;
-        while ( right < nums.length ) {
-            sum += nums[right];
-            if ( right > k -1) {
-                maxAverage = Math.max(maxAverage, sum);
-                sum -= nums[left];
-                left ++;
-            }
-            right ++;
-        }
 
+        while (right < nums.length) {
+            currentSum += nums[right];
+
+            if (right - left + 1 >= k) {
+                maxAverage = Math.max(maxAverage, currentSum / k);
+                currentSum -= nums[left];
+                left++;
+            }
+            right++;
+        }
         return maxAverage;
     }
 
