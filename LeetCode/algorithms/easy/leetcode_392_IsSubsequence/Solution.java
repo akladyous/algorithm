@@ -49,7 +49,9 @@ public class Solution {
         }
         return sPointer == s.length();
     }
-
+    // n-1
+    // E
+    // k=0
     static boolean solution2(String s, String t) {
         int sPointer = 0;
 
