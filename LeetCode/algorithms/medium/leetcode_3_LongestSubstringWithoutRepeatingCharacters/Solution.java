@@ -1,4 +1,4 @@
-package easy.leetcode_3_LongestSubstringWithoutRepeatingCharacters;
+package medium.leetcode_3_LongestSubstringWithoutRepeatingCharacters;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -7,7 +7,6 @@ import java.util.Set;
 public class Solution {
 
     public static void main(String[] args) {
-        String testCase = "";
         System.out.println(lengthOfLongestSubstring("abcabcbb"));
         System.out.println(lengthOfLongestSubstring("bbbbb"));
         System.out.println(lengthOfLongestSubstring("pwwkew"));

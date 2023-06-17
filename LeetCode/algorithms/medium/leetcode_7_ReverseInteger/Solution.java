@@ -1,4 +1,4 @@
-package easy.leetcode_7_ReverseInteger;
+package medium.leetcode_7_ReverseInteger;
 
 public class Solution {
     public static void main(String[] args) {
