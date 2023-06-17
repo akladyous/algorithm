@@ -4,28 +4,27 @@ import java.util.*;
 
 public class Practice {
     public static void main(String[] args) {
-        System.out.println(lengthOfLongestSubstring("abcabcbb"));
-        System.out.println(lengthOfLongestSubstring("bbbbb"));
-        System.out.println(lengthOfLongestSubstring("pwwkew"));
-
+        System.out.println(missingNumber2(new int[]{1,2,3,1}));
+    }
+    static int missingNumber(int[] nums) {
+        int missing = nums.length; // Initialize missing as the last index of nums
+        // XOR all the numbers and their indices
+        for (int i = 0; i < nums.length; i++) {
+            missing ^= i ^ nums[i];
+        }
+        return missing;
     }
 
-    static int lengthOfLongestSubstring(String s) {
-        int left = 0;
-        int right = 0;
-        int maxLen = 0;
-        HashSet<Character> window = new HashSet<> ();
-        while ( right < s.length() ) {
-            if (! window.contains(s.charAt(right))) {
-                window.add(s.charAt(right));
-                right ++;
-                maxLen = Math.max(maxLen, window.size());
-            } else {
-                window.remove(s.charAt(left));
-                left ++;
-            }
+    static int missingNumber2(int[] nums) {
+        int n = nums.length;
+        int expectedSum = n * (n + 1) / 2;
+        int actualSum = 0;
+
+        for (int num : nums) {
+            actualSum += num;
         }
-        return maxLen;
-        }
+
+        return expectedSum - actualSum;
+    }
 }
 
