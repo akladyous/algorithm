@@ -13,22 +13,6 @@ public class Practice {
         System.out.println(Arrays.toString(twoSum_sortedList(new int[]{2,7,3,10,3}, 5)));
 
     }
-    /*
-    2,7,11,15
-    2
-      7,11,15
-        11,15
-
-    7
-        11,15
-           15
-    11
-        15
-    2,7,11,15       [9]
-    {}
-    diff = target - current nums[i] = 2 = 7
-    {2:0}
-    */
     static int[] twoSum(int[] nums, int target) {
         HashMap<Integer, Integer> indices = new HashMap<>();
         for (int i=0; i<nums.length; i++) {
