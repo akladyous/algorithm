@@ -11,13 +11,14 @@ public class Solution {
         int left = 0;
         int right = nums.length - 1;
         int currentSum = 0;
-        int max = 0;
+        double max = 0;
         for (int i=0; i < k; i++) {
             for (int j=i; j<k && j<nums.length; j++) {
              currentSum += nums[j];
             }
-
-            max = Math.max(max, currentSum / k);
+            double avg = currentSum / k;
+            max = Math.max(max, avg );
+            currentSum = 0;
         }
 
         return 0d;
