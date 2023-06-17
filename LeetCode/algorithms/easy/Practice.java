@@ -9,6 +9,9 @@ public class Practice {
         System.out.println(Arrays.toString(twoSum_bruteForce(new int[]{2,7,11,15}, 9)));
         System.out.println(Arrays.toString(twoSum_bruteForce(new int[]{2,7,3,10,3}, 5)));
 
+        System.out.println(Arrays.toString(twoSum_sortedList(new int[]{2,7,11,15}, 9)));
+        System.out.println(Arrays.toString(twoSum_sortedList(new int[]{2,7,3,10,3}, 5)));
+
     }
     /*
     2,7,11,15
@@ -43,16 +46,12 @@ public class Practice {
         int right = nums.length - 1;
 
         while ( left < right ) {
-            int mid = left + ( right - left ) / 2;
-            // 2,7,11,15
-            // L      R = 17
-
             int currentSum = nums[left] + nums[right];
-            if ( currentSum == target ) {
+            if ( currentSum == target) {
                 return new int[] {left, right};
             }
 
-            if (currentSum > target) {
+            if ( currentSum > target) {
                 right --;
             } else {
                 left ++;
