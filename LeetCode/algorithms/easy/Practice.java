@@ -12,7 +12,7 @@ public class Practice {
 
     }
 
-
+    //-----------------------------------------------------------------------------------------------------------------
     static int leetcode_26_removeDuplicatesFromSortedArray(int[] nums) {
         int left = 0;
         for (int right=0; right < nums.length; right++) {
@@ -23,10 +23,8 @@ public class Practice {
         }
         return left + 1;
     }
-
-
-
-    static boolean leetcode_20_isValid(String s) {
+    //-----------------------------------------------------------------------------------------------------------------
+    static boolean leetcode_20_isValidParentheses(String s) {
         HashMap<Character, Character> parentheses = new HashMap<>();
         parentheses.put('(', ')');
         parentheses.put('[', ']');
@@ -49,9 +47,7 @@ public class Practice {
         }
         return stack.isEmpty();
     }
-
-
-
+    //-----------------------------------------------------------------------------------------------------------------
     public static String leetcode_14_longestCommonPrefix(String[] strs) {
         String prefix = strs[0];
         for(int i=1;i<strs.length;i++){
