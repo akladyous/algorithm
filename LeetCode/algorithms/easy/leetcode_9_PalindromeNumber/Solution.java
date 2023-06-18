@@ -9,6 +9,7 @@ public class Solution {
 
     }
 
+
     public static boolean isPalindrome(int x) {
         char[] nums = String.valueOf(x).toCharArray();
         int left = 0;
