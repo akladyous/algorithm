@@ -10,12 +10,6 @@ public class Practice {
     static int removeDuplicatesFromSortedArray_26(int[] nums) {
         int left = 0;
         for (int right=0; right < nums.length; right++) {
-            /*
-            L
-            0 0 1 1 1
-                R
-            0 1 1 1 1
-             */
             if ( nums[right] > nums[left] ) {
                 left ++;
                 nums[left] = nums[right];
