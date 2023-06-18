@@ -4,9 +4,34 @@ import java.util.*;
 
 public class Practice {
     public static void main(String[] args) {
-        String[] strs1 = {"flower", "flow", "flight"};
-        String longestPrefix1 = longestCommonPrefix(strs1);
-        System.out.println("-" + longestPrefix1 + "-");
+        int[] nums1 = {1, 1, 2};
+        int k1 = removeDuplicatesFromSortedArray_26(nums1);
+        System.out.println(k1); // Output: 2
+
+        int[] nums2 = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+        int k2 = removeDuplicatesFromSortedArray_26(nums2);
+        System.out.println(k2); // Output: 5
+
+        int[] nums3 = {1, 2, 3, 3, 4, 4, 5};
+        int k3 = removeDuplicatesFromSortedArray_26(nums3);
+        System.out.println(k3); // Output: 5
+    }
+
+    static int removeDuplicatesFromSortedArray_26(int[] nums) {
+        int left = 0;
+        for (int right=0; right < nums.length; right++) {
+            /*
+            L
+            0 0 1 1 1
+                R
+            0 1 1 1 1
+             */
+            if ( nums[right] > nums[left] ) {
+                left ++;
+                nums[left] = nums[right];
+            }
+        }
+        return left + 1;
     }
 
     static boolean isValid(String s) {
@@ -33,11 +58,6 @@ public class Practice {
         return stack.isEmpty();
     }
 
-    static boolean isValid2(String s) {
-        Stack<Character> stack = new Stack<>();
-
-        return stack.isEmpty();
-    }
 
 
     public static String longestCommonPrefix(String[] strs) {
