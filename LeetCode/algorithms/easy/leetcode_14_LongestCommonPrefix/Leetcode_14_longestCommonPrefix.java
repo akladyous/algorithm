@@ -1,6 +1,6 @@
 package easy.leetcode_14_LongestCommonPrefix;
 
-public class Solution {
+public class Leetcode_14_longestCommonPrefix {
 
     public static void main(String[] args) {
         String[] strs1 = {"flower", "flow", "flight"};

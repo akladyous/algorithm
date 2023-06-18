@@ -10,6 +10,20 @@ public class Practice {
         System.out.println(leetcode_27_removeElement(new int[]{0,1,2,2,3,0,4,2}, 2));
     }
 
+    //-----------------------------------------------------------------------------------------------------------------
+    public int leetcode_28_find_the_Index_of_the_First_Occurrence_in_a_String(String haystack, String needle) {
+        for (int i = 0; i <= haystack.length() - needle.length(); i++) {
+            int j;
+            for (j = 0; j < needle.length(); j++) {
+                if (haystack.charAt(i + j) != needle.charAt(j)) break;
+            }
+            if (j == needle.length()) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    //-----------------------------------------------------------------------------------------------------------------
     static int leetcode_27_removeElement(int[] nums, int val) {
         /*
             0 0 0 0 1
@@ -68,15 +82,17 @@ public class Practice {
     }
     //-----------------------------------------------------------------------------------------------------------------
     public static String leetcode_14_longestCommonPrefix(String[] strs) {
+        if (strs == null || strs.length == 0) {
+            return "";
+        }
         String prefix = strs[0];
-        for(int i=1;i<strs.length;i++){
+        for (int i=1; i<strs.length; i++) {
             while ( !strs[i].startsWith(prefix) ) {
                 prefix = prefix.substring(0, prefix.length() - 1);
-                if (prefix.isEmpty()) return prefix;
-            }
+                if ( prefix.isEmpty()) return "";
+            };
         }
         return prefix;
-
     }
     //-----------------------------------------------------------------------------------------------------------------
     public static int leetcode_13_RomanToInteger(String s) {
