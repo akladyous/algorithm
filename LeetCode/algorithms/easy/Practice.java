@@ -4,20 +4,27 @@ import java.util.*;
 
 public class Practice {
     public static void main(String[] args) {
-        System.out.println(leetcode_27_removeElement(new int[]{3,2,2,3}, 3));
-        System.out.println(leetcode_27_removeElement(new int[]{5, 5, 5, 5}, 5));
-        System.out.println(leetcode_27_removeElement(new int[]{1, 2, 3, 4, 5}, 3));
-        System.out.println(leetcode_27_removeElement(new int[]{0,1,2,2,3,0,4,2}, 2));
+
     }
+
 
     //-----------------------------------------------------------------------------------------------------------------
     public int leetcode_28_find_the_Index_of_the_First_Occurrence_in_a_String(String haystack, String needle) {
-        for (int i = 0; i <= haystack.length() - needle.length(); i++) {
+        int n = haystack.length();
+        int m = needle.length();
+
+        if (m > n) {
+            return -1;
+        }
+
+        for (int i = 0; i <= n - m; i++) {
             int j;
-            for (j = 0; j < needle.length(); j++) {
-                if (haystack.charAt(i + j) != needle.charAt(j)) break;
+            for (j = 0; j < m; j++) {
+                if (haystack.charAt(i + j) != needle.charAt(j)) {
+                    break;
+                }
             }
-            if (j == needle.length()) {
+            if (j == m) {
                 return i;
             }
         }

@@ -1,4 +1,4 @@
-package medium.leetcode_4_MedianOfTwoSortedArrays;
+package hard.leetcode_4_MedianOfTwoSortedArrays;
 
 import java.util.Arrays;
 

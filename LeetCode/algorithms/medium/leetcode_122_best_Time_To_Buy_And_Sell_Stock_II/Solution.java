@@ -1,4 +1,4 @@
-package easy.leetcode_122_best_Time_To_Buy_And_Sell_Stock_II;
+package medium.leetcode_122_best_Time_To_Buy_And_Sell_Stock_II;
 
 public class Solution {
     public static void main(String[] args) {

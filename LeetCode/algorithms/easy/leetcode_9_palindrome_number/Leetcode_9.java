@@ -1,16 +1,14 @@
-package easy.leetcode_9_PalindromeNumber;
+package easy.leetcode_9_palindrome_number;
 
-public class Solution {
+public class Leetcode_9 {
     public static void main(String[] args) {
-        System.out.println(isPalindrome(121));
-        System.out.println(isPalindrome(1410110141));
-        System.out.println(isPalindrome_2(121));
-        System.out.println(isPalindrome_2(1410110141));
-
+        System.out.println(leetcode_9_palindrome_number(121));
+        System.out.println(leetcode_9_palindrome_number(1410110141));
+        System.out.println(leetcode_9_palindrome_number_2(121));
+        System.out.println(leetcode_9_palindrome_number_2(1410110141));
     }
 
-
-    public static boolean isPalindrome(int x) {
+    public static boolean leetcode_9_palindrome_number(int x) {
         char[] nums = String.valueOf(x).toCharArray();
         int left = 0;
         int right = nums.length - 1;
@@ -24,7 +22,7 @@ public class Solution {
         return true;
     }
 
-    public static boolean isPalindrome_2(int x) {
+    public static boolean leetcode_9_palindrome_number_2(int x) {
         int reversedNumber = 0;
         int originalNumber = x;
         while ( x > 0 ) {

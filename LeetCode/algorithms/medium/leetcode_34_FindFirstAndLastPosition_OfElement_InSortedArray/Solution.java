@@ -1,4 +1,4 @@
-package easy.leetcode_34_FindFirstAndLastPosition_OfElement_InSortedArray;
+package medium.leetcode_34_FindFirstAndLastPosition_OfElement_InSortedArray;
 
 import java.util.ArrayList;
 import java.util.Arrays;

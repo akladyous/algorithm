@@ -7,11 +7,11 @@ import java.util.HashMap;
 
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-public class Leetcode_1_twoSum {
+public class Leetcode_1 {
 
     public static void main(String[] args) {
         int[] result;
-        Leetcode_1_twoSum solution = new Leetcode_1_twoSum();
+        Leetcode_1 solution = new Leetcode_1();
 
         result = solution.leetcode_1_twoSum(new int[]{2,7,11,15}, 9);
         System.out.println(Arrays.toString(result));
@@ -66,7 +66,7 @@ public class Leetcode_1_twoSum {
 }
 
 class TwoSumTest {
-    Leetcode_1_twoSum solution = new Leetcode_1_twoSum();
+    Leetcode_1 solution = new Leetcode_1();
     int[] result = new int[2];
 
     @Test
