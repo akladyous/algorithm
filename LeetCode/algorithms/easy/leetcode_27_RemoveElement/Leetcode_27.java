@@ -32,6 +32,21 @@ public class Leetcode_27 {
   If nums[right] is not equal to `val`, we move it to the front of the array at position `left` and increment `left`.
   Finally, we return `left`, which represents the number of elements not equal to val.
   */
+  /*
+
+    L
+    3 2 2 3     Initial state:
+    R
+    L
+    2 2 3 3     Step 1:
+    R
+    L
+    2 2 3 3     Step 2:
+      R
+    L
+    2 2 3 3     Step 3:
+        R
+  */
   static int leetcode_27_removeElement(int[] nums, int val) {
     int left = 0;
     for (int right=0; right < nums.length; right ++) {

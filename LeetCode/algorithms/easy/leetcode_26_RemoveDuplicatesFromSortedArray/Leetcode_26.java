@@ -19,7 +19,6 @@ public class Leetcode_26 {
 
     }
     // it's equivalent to: counts the number of unique elements in the nums array.
-
     public static int leetcode_26_removeDuplicatesFromSortedArray(int[] nums) {
         int left = 0;
         for (int right=1; right < nums.length; right ++) {

@@ -6,33 +6,37 @@ import java.util.*;
 
 public class Practice {
     public static void main(String[] args) {
-        int[] nums3 = {1, 2, 3, 3, 4, 4, 5};
-        int k3 = leetcode_26_removeDuplicatesFromSortedArray(nums3);
-        System.out.println(k3); // Output: 5
 
-        int[] nums2 = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
-        int k2 = leetcode_26_removeDuplicatesFromSortedArray(nums2);
-        System.out.println(k2); // Output: 5
-        System.out.println("-".repeat(50));
-
-        int[] nums1 = {1, 1, 2};
-        int k1 = leetcode_26_removeDuplicatesFromSortedArray(nums1);
-        System.out.println(k1); // Output: 2
-        System.out.println("-".repeat(50));
-
-
+        System.out.println(leetcode_27_removeElement(new int[]{3,2,2,3}, 3));
+        System.out.println(leetcode_27_removeElement(new int[]{5, 5, 5, 5}, 5));
+        System.out.println(leetcode_27_removeElement(new int[]{1, 2, 3, 4, 5}, 3));
+        System.out.println(leetcode_27_removeElement(new int[]{0,1,2,2,3,0,4,2}, 2));
     }
-
-    public static int leetcode_26_removeDuplicatesFromSortedArray(int[] nums) {
+    /*
+            L
+            3,2,2,3        3
+            R
+              L
+            2 3 2 3
+              R
+                L
+            2 2 2 3
+                  R
+                  L
+            2 2 3 3
+                  R
+        */
+    static int leetcode_27_removeElement(int[] nums, int val) {
         int left = 0;
-        for (int right=1; right < nums.length; right ++) {
-            if (nums[right] > nums[left]) {
-                left ++;
+        for (int right = 0; right < nums.length; right ++) {
+            if (nums[right] != val) {
+                int temp = nums[left];
                 nums[left] = nums[right];
+                nums[right] = temp;
+                left ++;
             }
         }
-        return left + 1;
+        return left;
     }
-
 }
 
