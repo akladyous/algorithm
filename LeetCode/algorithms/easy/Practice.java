@@ -17,7 +17,7 @@ public class Practice {
         System.out.println(k3); // Output: 5
     }
 
-    static int removeDuplicatesFromSortedArray_26(int[] nums) {
+    static int removeDuplicatesFromSortedArray_26_1(int[] nums) {
         int left = 0;
         for (int right=0; right < nums.length; right++) {
             /*
@@ -32,6 +32,18 @@ public class Practice {
             }
         }
         return left + 1;
+    }
+
+    static int removeDuplicatesFromSortedArray_26(int[] nums) {
+        /*
+
+            0, 0, 1, 1, 1, 2, 2, 3, 3, 4
+        */
+
+        for(int r=nums.length-1, left =r-1; r>= 0; r--) {
+
+        }
+
     }
 
     static boolean isValid(String s) {
