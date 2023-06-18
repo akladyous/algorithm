@@ -4,15 +4,16 @@ import java.util.*;
 
 public class Practice {
     public static void main(String[] args) {
+        System.out.println(leetcode_27_removeElement(new int[]{3,2,2,3}, 3));
+        System.out.println(leetcode_27_removeElement(new int[]{0,1,2,2,3,0,4,2}, 2));
+    }
+
+    int leetcode_27_removeElement(int[] nums, int val) {
 
     }
 
-    int removeElement(int[] nums, int val) {
 
-    }
-
-
-    static int removeDuplicatesFromSortedArray_26(int[] nums) {
+    static int leetcode_26_removeDuplicatesFromSortedArray(int[] nums) {
         int left = 0;
         for (int right=0; right < nums.length; right++) {
             if ( nums[right] > nums[left] ) {
@@ -25,7 +26,7 @@ public class Practice {
 
 
 
-    static boolean isValid(String s) {
+    static boolean leetcode_20_isValid(String s) {
         HashMap<Character, Character> parentheses = new HashMap<>();
         parentheses.put('(', ')');
         parentheses.put('[', ']');
@@ -51,7 +52,7 @@ public class Practice {
 
 
 
-    public static String longestCommonPrefix(String[] strs) {
+    public static String leetcode_14_longestCommonPrefix(String[] strs) {
         String prefix = strs[0];
         for(int i=1;i<strs.length;i++){
             while ( !strs[i].startsWith(prefix) ) {
@@ -62,17 +63,8 @@ public class Practice {
         return prefix;
 
     }
-        public static boolean isPalindrome2(int x) {
-        char[] num = String.valueOf(x).toCharArray();
-        int left = 0, right = num.length - 1;
-        while ( left < right ) {
-            if ( num[left] != num[right]) return false;
-            left ++; right --;
-        }
-        return true;
-    }
-
-    public static boolean isPalindrome(int x) {
+    //-----------------------------------------------------------------------------------------------------------------
+    public static boolean leetcode_9_isPalindromeNumber_1(int x) {
         int originalNumber = x;
         int reversed = 0;
         while (x > 0) {
@@ -82,6 +74,16 @@ public class Practice {
         }
         return originalNumber == reversed;
     }
+    public static boolean leetcode_9_isPalindromeNumber_2(int x) {
+        char[] num = String.valueOf(x).toCharArray();
+        int left = 0, right = num.length - 1;
+        while ( left < right ) {
+            if ( num[left] != num[right]) return false;
+            left ++; right --;
+        }
+        return true;
+    }
+    //-----------------------------------------------------------------------------------------------------------------
     static int missingNumber(int[] nums) {
         int missing = nums.length; // Initialize missing as the last index of nums
         // XOR all the numbers and their indices
@@ -90,7 +92,7 @@ public class Practice {
         }
         return missing;
     }
-
+    //-----------------------------------------------------------------------------------------------------------------
     static int missingNumber2(int[] nums) {
         int n = nums.length;
         int expectedSum = n * (n + 1) / 2;
