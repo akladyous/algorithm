@@ -4,13 +4,54 @@ import java.util.*;
 
 public class Practice {
     public static void main(String[] args) {
-        System.out.println(missingNumber2(new int[]{1,2,3,1}));
-        System.out.println(isPalindrome(1221));
-        System.out.println(isPalindrome2(1221));
-
+        String[] strs1 = {"flower", "flow", "flight"};
+        String longestPrefix1 = longestCommonPrefix(strs1);
+        System.out.println("-" + longestPrefix1 + "-");
     }
 
-    public static boolean isPalindrome2(int x) {
+    static boolean isValid(String s) {
+        HashMap<Character, Character> parentheses = new HashMap<>();
+        parentheses.put('(', ')');
+        parentheses.put('[', ']');
+        parentheses.put('{', '}');
+        Stack<Character> stack = new Stack<>();
+
+        for (int i=0; i< s.length(); i++) {
+            char currentChar = s.charAt(i);
+            if (parentheses.containsKey(currentChar)) {
+                stack.push(currentChar);
+            } else {
+                if (stack.isEmpty()) {
+                    return false;
+                }
+                char lastOpeningParentheses = stack.pop(); // ( [ {
+                if ( ! (parentheses.get(lastOpeningParentheses) == currentChar) ) {
+                    return false;
+                }
+            }
+        }
+        return stack.isEmpty();
+    }
+
+    static boolean isValid2(String s) {
+        Stack<Character> stack = new Stack<>();
+
+        return stack.isEmpty();
+    }
+
+
+    public static String longestCommonPrefix(String[] strs) {
+        String prefix = strs[0];
+        for(int i=1;i<strs.length;i++){
+            while ( !strs[i].startsWith(prefix) ) {
+                prefix = prefix.substring(0, prefix.length() - 1);
+                if (prefix.isEmpty()) return prefix;
+            }
+        }
+        return prefix;
+
+    }
+        public static boolean isPalindrome2(int x) {
         char[] num = String.valueOf(x).toCharArray();
         int left = 0, right = num.length - 1;
         while ( left < right ) {
