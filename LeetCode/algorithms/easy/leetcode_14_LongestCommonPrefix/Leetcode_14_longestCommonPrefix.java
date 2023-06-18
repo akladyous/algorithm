@@ -36,4 +36,15 @@ public class Leetcode_14_longestCommonPrefix {
         // so we return it.
         return prefix;
     }
+
+    public static String longestCommonSuffix(String[] strs) {
+        String suffix = strs[0];
+        for (int i=1; i< strs.length; i++) {
+            while ( !strs[i].endsWith(suffix) ) {
+                suffix = suffix.substring(1);
+                if (suffix.isEmpty()) return "";
+            }
+        }
+        return suffix;
+    }
 }

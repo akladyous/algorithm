@@ -12,7 +12,7 @@ public class Leetcode_13_RomanToInteger {
         int result2 = leetcode_13_RomanToInteger(romanNumeral2);
         System.out.println(result2);
 
-        String romanNumeral3 = "IIIIII";
+        String romanNumeral3 = "LVIII";
         int result3 = leetcode_13_RomanToInteger(romanNumeral3);
         System.out.println(result3);
 

@@ -6,23 +6,33 @@ import java.util.*;
 
 public class Practice {
     public static void main(String[] args) {
-        System.out.println(leetcode_9_palindrome_number(121));
-        System.out.println(leetcode_9_palindrome_number(1410110141));
-//        System.out.println(leetcode_9_palindrome_number_2(121));
-//        System.out.println(leetcode_9_palindrome_number_2(1410110141));
+        int[] nums3 = {1, 2, 3, 3, 4, 4, 5};
+        int k3 = leetcode_26_removeDuplicatesFromSortedArray(nums3);
+        System.out.println(k3); // Output: 5
+
+        int[] nums2 = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+        int k2 = leetcode_26_removeDuplicatesFromSortedArray(nums2);
+        System.out.println(k2); // Output: 5
+        System.out.println("-".repeat(50));
+
+        int[] nums1 = {1, 1, 2};
+        int k1 = leetcode_26_removeDuplicatesFromSortedArray(nums1);
+        System.out.println(k1); // Output: 2
+        System.out.println("-".repeat(50));
+
+
     }
 
-    public static boolean leetcode_9_palindrome_number(int x) {
-        int original = x;
-        int reversed = 0;
-        while (x > 0) {
-            int leastSignificantDigit = x % 10;
-            reversed = reversed * 10 + leastSignificantDigit;
-            x /= 10;
+    public static int leetcode_26_removeDuplicatesFromSortedArray(int[] nums) {
+        int left = 0;
+        for (int right=1; right < nums.length; right ++) {
+            if (nums[right] > nums[left]) {
+                left ++;
+                nums[left] = nums[right];
+            }
         }
-        return original == reversed;
+        return left + 1;
     }
-
 
 }
 

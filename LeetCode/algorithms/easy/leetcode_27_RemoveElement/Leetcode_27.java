@@ -18,7 +18,7 @@ Input: nums = [0,1,2,2,3,0,4,2], val = 2
 Output: 5, nums = [0,1,4,0,3,_,_,_]
 */
 
-public class Solution {
+public class Leetcode_27 {
 
   public static void main(String[] args) {
     System.out.println(leetcode_27_removeElement(new int[]{3,2,2,3}, 3));
