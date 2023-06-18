@@ -79,6 +79,31 @@ public class Practice {
 
     }
     //-----------------------------------------------------------------------------------------------------------------
+    public static int leetcode_13_RomanToInteger(String s) {
+        int result = 0;
+        int prevValue = 0;
+        int currentValue = 0;
+
+        for (int i = s.length() - 1; i >= 0; i --) {
+            switch (s.charAt(i)) {
+                case 'I' -> currentValue = 1;
+                case 'V' -> currentValue = 5;
+                case 'X' -> currentValue = 10;
+                case 'L' -> currentValue = 50;
+                case 'C' -> currentValue = 100;
+                case 'D' -> currentValue = 500;
+                case 'M' -> currentValue = 1000;
+            }
+            if (currentValue >= prevValue) {
+                result += currentValue;
+            } else {
+                result -= currentValue;
+            }
+            prevValue = currentValue;
+        }
+        return result;
+    }
+    //-----------------------------------------------------------------------------------------------------------------
     public static boolean leetcode_9_isPalindromeNumber_1(int x) {
         int originalNumber = x;
         int reversed = 0;
@@ -97,6 +122,19 @@ public class Practice {
             left ++; right --;
         }
         return true;
+    }
+    //-----------------------------------------------------------------------------------------------------------------
+    public int[] leetcode_1_twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> indices = new HashMap<>();
+        for (int i=0; i < nums.length; i++) {
+            int diff = target - nums[i];
+            if (indices.containsKey(diff)) {
+                return new int[] {indices.get(diff), i};
+            }
+            indices.put(nums[i], i);
+        }
+        return null;
+
     }
     //-----------------------------------------------------------------------------------------------------------------
     static int missingNumber(int[] nums) {

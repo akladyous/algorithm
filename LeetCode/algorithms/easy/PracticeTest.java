@@ -1,6 +1,6 @@
 package easy;
 
-import easy.leetcode_1_twoSum.Solution;
+import easy.leetcode_1_twoSum.Leetcode_1_twoSum;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -11,7 +11,7 @@ class PracticeTest {
 
     @Test
     void testTwoSum() {
-        Solution solution = new Solution();
+        Leetcode_1_twoSum solution = new Leetcode_1_twoSum();
 
         int[] result = new int[2];
         result = solution.twoSum(new int[]{2,7,11,15}, 9);

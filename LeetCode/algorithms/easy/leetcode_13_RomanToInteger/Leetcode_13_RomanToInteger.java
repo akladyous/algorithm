@@ -2,23 +2,23 @@ package easy.leetcode_13_RomanToInteger;
 
 import java.util.HashMap;
 
-public class Solution {
+public class Leetcode_13_RomanToInteger {
     public static void main(String[] args) {
         String romanNumeral1 = "XXIV";
-        int result1 = romanToInteger(romanNumeral1);
+        int result1 = leetcode_13_RomanToInteger(romanNumeral1);
         System.out.println(result1);
 
         String romanNumeral2 = "MCMLXXIV";
-        int result2 = romanToInteger(romanNumeral2);
+        int result2 = leetcode_13_RomanToInteger(romanNumeral2);
         System.out.println(result2);
 
         String romanNumeral3 = "IIIIII";
-        int result3 = romanToInteger(romanNumeral3);
+        int result3 = leetcode_13_RomanToInteger(romanNumeral3);
         System.out.println(result3);
 
     }
 
-    public static int romanToInteger(String s) {
+    public static int leetcode_13_RomanToInteger(String s) {
         int result = 0;
         int prevValue = 0;
         int currentValue = 0;
@@ -46,14 +46,14 @@ public class Solution {
 }
 //-----------------------------------------------------------
 
-class RomanToInteger_solution_2 {
+class Leetcode_13_RomanToInteger_2 {
     public static void main(String[] args) {
         String romanNumeral = "XXIV";
-        int number = romanToInteger(romanNumeral);
+        int number = leetcode_13_RomanToInteger(romanNumeral);
         System.out.println(number);
     }
 
-    public static int romanToInteger(String romanNumeral) {
+    public static int leetcode_13_RomanToInteger(String romanNumeral) {
         HashMap<Character, Integer> romanValues = new HashMap<>();
         romanValues.put('I', 1);
         romanValues.put('V', 5);
