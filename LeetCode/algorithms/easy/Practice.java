@@ -7,6 +7,11 @@ public class Practice {
 
     }
 
+    int removeElement(int[] nums, int val) {
+
+    }
+
+
     static int removeDuplicatesFromSortedArray_26(int[] nums) {
         int left = 0;
         for (int right=0; right < nums.length; right++) {
