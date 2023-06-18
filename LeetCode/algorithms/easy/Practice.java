@@ -8,8 +8,23 @@ public class Practice {
         System.out.println(leetcode_27_removeElement(new int[]{0,1,2,2,3,0,4,2}, 2));
     }
 
-    int leetcode_27_removeElement(int[] nums, int val) {
-
+    static int leetcode_27_removeElement(int[] nums, int val) {
+        /*
+            L R
+            3 2 2 3     [3]
+              2 != 3
+              shift 2 to left
+            2 2 2 3
+        */
+        int left = 0;
+        for (int right=0; right < nums.length; right ++) {
+            if (nums[right] != val) {
+                nums[left] = nums[right];
+                left ++;
+            }
+        }
+        int result = nums.length - left;
+        return left;
     }
 
     //-----------------------------------------------------------------------------------------------------------------
