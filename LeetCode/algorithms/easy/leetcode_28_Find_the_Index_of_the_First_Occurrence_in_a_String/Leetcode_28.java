@@ -1,8 +1,7 @@
 package easy.leetcode_28_Find_the_Index_of_the_First_Occurrence_in_a_String;
 
 public class Leetcode_28 {
-
-    public static void main(String[] args) {
+    public static void main(String... args) {
         Leetcode_28 leetcode_28 = new Leetcode_28();
 
         // Test Case 1
@@ -23,6 +22,7 @@ public class Leetcode_28 {
         int result3 = leetcode_28.leetcode_28_find_the_Index_of_the_First_Occurrence_in_a_String(haystack3, needle3);
         System.out.println("Test Case 3 Result: " + result3);
     }
+
     public int leetcode_28_find_the_Index_of_the_First_Occurrence_in_a_String(String haystack, String needle) {
         int n = haystack.length();
         int m = needle.length();
@@ -46,7 +46,4 @@ public class Leetcode_28 {
         }
         return -1; // No match found
     }
-
-
-
 }

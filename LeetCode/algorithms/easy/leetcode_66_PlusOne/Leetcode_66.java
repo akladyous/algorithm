@@ -2,7 +2,7 @@ package easy.leetcode_66_PlusOne;
 
 import java.util.Arrays;
 
-public class Solution {
+public class Leetcode_66 {
 
     public static void main(String[] args) {
         int[] digits1 = {1, 2, 3};
@@ -20,22 +20,27 @@ public class Solution {
 
     public static int[] plusOne(int[] digits) {
         int carry = 1;
-        for (int i = digits.length - 1; i >= 0; i--) {
+        int n = digits.length;
+
+        for (int i = n - 1; i >= 0; i--) {
             int sum = digits[i] + carry;
-            digits[i] = sum % 10;
-            carry = sum / 10;
+            if (sum < 10) {
+                digits[i] = sum;
+                carry = 0;
+            } else {
+                digits[i] = sum % 10;
+                carry = 1;
+            }
         }
 
-        if (carry > 0) {
-            int[] result = new int[digits.length + 1];
-            result[0] = carry;
-            for (int i = 1; i <= digits.length; i++) {
-                result[i] = digits[i - 1];
+        if (carry == 1) {
+            int[] result = new int[n + 1];
+            result[0] = 1;
+            for (int i = 0; i < n; i++) {
+                result[i + 1] = digits[i];
             }
             return result;
         }
         return digits;
     }
-
-
 }

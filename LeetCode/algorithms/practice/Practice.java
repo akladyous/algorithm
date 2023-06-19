@@ -1,29 +1,49 @@
 package practice;
 
 import easy.leetcode_1_twoSum.Leetcode_1;
+import easy.leetcode_28_Find_the_Index_of_the_First_Occurrence_in_a_String.Leetcode_28;
 
 import java.util.*;
 
 public class Practice {
+
     public static void main(String[] args) {
-        System.out.println(leetcode_27_removeElement(new int[]{3,2,2,3}, 3));
-        System.out.println(leetcode_27_removeElement(new int[]{5, 5, 5, 5}, 5));
-        System.out.println(leetcode_27_removeElement(new int[]{1, 2, 3, 4, 5}, 3));
-        System.out.println(leetcode_27_removeElement(new int[]{0,1,2,2,3,0,4,2}, 2));
+        int[] digits1 = {1, 2, 3};
+        System.out.println(Arrays.toString(plusOne(digits1))); // [1, 2, 4]
+
+        int[] digits2 = {4, 3, 2, 1};
+        System.out.println(Arrays.toString(plusOne(digits2))); // [4, 3, 2, 2]
+
+        int[] digits3 = {9};
+        System.out.println(Arrays.toString(plusOne(digits3))); // [1, 0]
+
+        int[] digits4 = {9,9,9,9};
+        System.out.println(Arrays.toString(plusOne(digits4))); // [1, 0, 0, 0, 0]
     }
 
-
-    static int leetcode_27_removeElement(int[] nums, int val) {
-        int left = 0;
-        for (int right=0; right < nums.length; right ++) {
-            if (nums[right] != val) {
-                int temp = nums[left];
-                nums[left] = nums[right];
-                nums[right] = temp;
-                left ++;
+    public static int[] plusOne(int[] digits) {
+        int carry = 1;
+        int n = digits.length;
+        for (int i=n-1; i>=0;i--) {
+            int sum = digits[i] + carry;
+            if (sum < 10) {
+                digits[i] = sum;
+                carry = 0;
+            } else {
+                digits[i] = sum % 10;
+                carry = 1;
             }
         }
-        return left;
+        if ( carry == 1) {
+            int[] result = new int[n+ 1];
+            result[0] = 1;
+            for (int i=0; i< n; i++) {
+                result[i+1] = digits[i];
+            }
+            return  result;
+        }
+        return digits;
     }
+
 }
 

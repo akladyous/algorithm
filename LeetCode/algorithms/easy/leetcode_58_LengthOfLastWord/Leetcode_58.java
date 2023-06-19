@@ -1,6 +1,6 @@
 package easy.leetcode_58_LengthOfLastWord;
 
-public class Solution {
+public class Leetcode_58 {
     public static void main(String[] args) {
         String s1 = "Hello World";
         System.out.println(lengthOfLastWord(s1));
@@ -17,8 +17,7 @@ public class Solution {
         for (int i=s.length() - 1; i >= 0; i--) {
             if (s.charAt(i) != ' ') {
                 length++;
-            }
-            else if (length > 0) {
+            } else if (length > 0) {
                 break;
             }
         }
