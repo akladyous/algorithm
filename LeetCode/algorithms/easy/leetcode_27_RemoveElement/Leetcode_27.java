@@ -18,13 +18,19 @@ Input: nums = [0,1,2,2,3,0,4,2], val = 2
 Output: 5, nums = [0,1,4,0,3,_,_,_]
 */
 
+import java.util.Arrays;
+
 public class Leetcode_27 {
 
   public static void main(String[] args) {
     System.out.println(leetcode_27_removeElement(new int[]{3,2,2,3}, 3));
+    // Output: 2
     System.out.println(leetcode_27_removeElement(new int[]{5, 5, 5, 5}, 5));
+    // Output: 0
     System.out.println(leetcode_27_removeElement(new int[]{1, 2, 3, 4, 5}, 3));
+    // Output: 4
     System.out.println(leetcode_27_removeElement(new int[]{0,1,2,2,3,0,4,2}, 2));
+    // Output: 5
   }
   /*
   In this solution, we use two pointers: `right` to iterate over the elements of the nums array,
@@ -55,6 +61,7 @@ public class Leetcode_27 {
         nums[left] = nums[right];
         nums[right] = temp;
         left ++;
+    System.out.println(Arrays.toString(nums));
       }
     }
     return left;

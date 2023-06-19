@@ -6,28 +6,24 @@ import java.util.*;
 
 public class Practice {
     public static void main(String[] args) {
-        int[] nums0 = {1,1,2,2,3};
-        int k0 = leetcode_26_removeDuplicatesFromSortedArray(nums0);
-        System.out.println(k0); // Output: 2
+        System.out.println(leetcode_27_removeElement(new int[]{3,2,2,3}, 3));
+        System.out.println(leetcode_27_removeElement(new int[]{5, 5, 5, 5}, 5));
+        System.out.println(leetcode_27_removeElement(new int[]{1, 2, 3, 4, 5}, 3));
+        System.out.println(leetcode_27_removeElement(new int[]{0,1,2,2,3,0,4,2}, 2));
     }
 
-    static int leetcode_26_removeDuplicatesFromSortedArray(int[] nums) {
+
+    static int leetcode_27_removeElement(int[] nums, int val) {
         int left = 0;
-        // 0 1 2 3 4
-        // 1 1 2 2 3
-        // L R
-        // L   R        match
-        //   L R
-        //   L     R
-        //     L   R
-        for (int right = 1; right < nums.length; right ++) {
-            if ( nums[right] > nums[left]) {
-                left ++;
+        for (int right=0; right < nums.length; right ++) {
+            if (nums[right] != val) {
+                int temp = nums[left];
                 nums[left] = nums[right];
+                nums[right] = temp;
+                left ++;
             }
         }
-        return left + 1;
+        return left;
     }
-
 }
 
