@@ -1,5 +1,7 @@
 package easy.leetcode_14_LongestCommonPrefix;
 
+import java.util.Arrays;
+
 public class Leetcode_14_longestCommonPrefix {
 
     public static void main(String[] args) {
