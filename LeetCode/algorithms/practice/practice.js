@@ -1,22 +1,12 @@
-/**
- * @param {string} s
- * @return {number}
- */
-var lengthOfLongestSubstring = function (s) {
-  let left = 0;
-  let right = 0;
-  let maxLen = 0;
-  const window = new Set();
+function sleep(millis) {
+  return new Promise((resolve) => {
+    debugger;
+    setTimeout(resolve, millis);
+  });
+}
 
-  while (right < s.length - 1) {
-    if (!window.has(s.charAt(right))) {
-      window.add(s.charAt(right));
-      right++;
-      maxLen = Math.max((maxLen, window.size));
-    } else {
-      window.delete(s.charAt(left));
-      left++;
-    }
-  }
-  return maxLen;
-};
+debugger;
+let t = Date.now();
+sleep(100).then(() => {
+  console.log(Date.now() - t); // Output: 100
+});
