@@ -1,24 +1,24 @@
-function lengthOfLongestSubstring(s=new String){
-    let left = 0;
-    let right = 0;
-    let max = 0;
-    let window = new Set();
-    while(right < s.length){
-        if(!window.has(s[right])){
-            window.add(s[right]);
-            right ++
-            max = Math.max(max, window.size)
-        } else{
-            window.delete(s[left])
-            left ++
-        }
+function lengthOfLongestSubstring(s = new String()) {
+  let left = 0;
+  let right = 0;
+  let maxLen = 0;
+  let window = new Set();
+  while (right < s.length) {
+    if (!window.has(s[right])) {
+      window.add(s[right]);
+      right++;
+      maxLen = Math.max(maxLen, window.size);
+    } else {
+      window.delete(s[left]);
+      left++;
     }
-    return max
-};
-console.log(lengthOfLongestSubstring("abcabcbb"));
-console.log(lengthOfLongestSubstring("abccabcabcc"));
-console.log(lengthOfLongestSubstring("aaaabaaa"));
-console.log(lengthOfLongestSubstring("pwwkew"));
+  }
+  return maxLen;
+}
+console.log(lengthOfLongestSubstring('abcabcbb'));
+console.log(lengthOfLongestSubstring('abccabcabcc'));
+console.log(lengthOfLongestSubstring('aaaabaaa'));
+console.log(lengthOfLongestSubstring('pwwkew'));
 
 /*
 
@@ -49,7 +49,7 @@ console.log(lengthOfLongestSubstring("pwwkew"));
          if charSet has str[right] == 'a'
          then: remove str[left] which is 'a' from charSet
 
-    
+
       ⬇-> left = 1
     a b c a b c b b
     X    ⬆ -> right = 3
